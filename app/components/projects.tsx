@@ -11,11 +11,10 @@ export default function Projects() {
   const projectTemplate = (project: Project) => {
     return (
       <Link href={project.link}>
-        <Image
-          src={project.image}
+        <img
+          // @ts-ignore
+          src={project.image.src}
           alt={project.name}
-          width={1200}
-          height={500}
           className="w-full max-h-[500px] h-auto object-cover"
         />
         <h5 className="inline">{project.name}</h5>{' '}
