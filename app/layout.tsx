@@ -2,9 +2,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/navbar'
-import { PrimeReactProvider } from 'primereact/api'
-import 'primereact/resources/themes/saga-blue/theme.css'
-import 'primereact/resources/primereact.min.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,10 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-50 text-gray-950`}>
-        <PrimeReactProvider>
-          <Navbar />
+        <Navbar />
+        <main className="flex flex-col items-center gap-48 justify-center my-12 tracking-wide">
           {children}
-        </PrimeReactProvider>
+        </main>
       </body>
     </html>
   )

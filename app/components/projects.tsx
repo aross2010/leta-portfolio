@@ -1,27 +1,30 @@
 'use client'
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'next/link'
-import Section from './section'
-import { Carousel } from 'primereact/carousel'
+import Section from './ui/section'
+
 import { Project } from '../lib/types'
 import { projects } from '../lib/data'
-import Image from 'next/image'
+import CarouselComponent from './ui/carousel'
 
 export default function Projects() {
   const projectTemplate = (project: Project) => {
     return (
-      <Link href={project.link}>
-        <img
-          // @ts-ignore
-          src={project.image.src}
-          alt={project.name}
-          className="w-full max-h-[500px] h-auto object-cover"
-        />
-        <h5 className="inline">{project.name}</h5>{' '}
-        <p className="text-sm inline mt-2 text-gray-500">
-          {project.description}
-        </p>
-      </Link>
+      <Fragment>
+        <Link href={project.link}>
+          <div
+            className="relative flex w-full h-[500px] bg-cover bg-center rounded-lg cursor-pointer"
+            style={{
+              backgroundImage: `url(${project.image.src})`,
+            }}
+          >
+            <h3 className="mt-auto ml-4 mb-4 text-white text-3xl font-semibold">
+              {project.name}
+            </h3>
+          </div>
+        </Link>
+        <div className="mt-1"></div>
+      </Fragment>
     )
   }
 
@@ -29,16 +32,18 @@ export default function Projects() {
     <Section id="projects">
       {/* <SectionHeader>Projects</SectionHeader> */}
       <div className="w-full">
-        {/*  new Carousel*/}
-        <Carousel
-          value={projects}
-          numVisible={1}
-          numScroll={1}
-          className="custom-carousel"
-          circular
-          autoplayInterval={5000}
-          itemTemplate={projectTemplate}
-        />
+        <CarouselComponent>
+          {projects.map((project, index) => {
+            return (
+              <div
+                key={index}
+                className="w-full"
+              >
+                {projectTemplate(project)}
+              </div>
+            )
+          })}
+        </CarouselComponent>
       </div>
     </Section>
   )

@@ -33,7 +33,7 @@ export default function Navbar() {
             return (
               <a
                 key={index}
-                className="px-4 py-2 text-gray-600 hover:text-gray-950 hover:bg-gray-200 transition-all rounded-lg"
+                className="px-4 py-2 text-sm text-gray-600 hover:text-gray-950 hover:bg-gray-200 transition-all rounded-lg"
                 href={navOption.href}
               >
                 {navOption.name}

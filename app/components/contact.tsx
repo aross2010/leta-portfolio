@@ -1,6 +1,6 @@
 import React from 'react'
-import SectionHeader from './section-header'
-import Section from './section'
+import SectionHeader from './ui/section-header'
+import Section from './ui/section'
 
 export default function Contact() {
   return (

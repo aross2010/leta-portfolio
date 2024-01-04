@@ -1,7 +1,8 @@
 import React from 'react'
-import SectionHeader from './section-header'
-import Section from './section'
+import SectionHeader from './ui/section-header'
+import Section from './ui/section'
 import profilePicture from '@/public/profile.png'
+import { links } from '../lib/data'
 
 export default function About() {
   return (
@@ -15,7 +16,21 @@ export default function About() {
           />
         </div>
         <div className="w-1/2">
-          <h1 className="text-4xl font-semibold mb-12">Leta Pham</h1>
+          <h1 className="text-4xl font-semibold mb-2">Leta Pham</h1>
+          <div className="flex items-center mb-12">
+            {links.map((link, index) => {
+              return (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  className="hover:bg-[#93bb76] p-1.5 text-gray-700 transition-all rounded-full "
+                >
+                  <link.icon className="w-6 h-6" />
+                </a>
+              )
+            })}
+          </div>
+
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
             ad qui consequuntur dolor recusandae, ipsum voluptas magnam ex minus

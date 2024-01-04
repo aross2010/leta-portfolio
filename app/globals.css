@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.react-multiple-carousel__arrow {
+  min-width: 35px !important;
+  min-height: 35px !important;
+  z-index: 5 !important;
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+.react-multiple-carousel__arrow::before {
+  font-size: 1rem !important;
+  color: rgb(255, 255, 255, 0.8) !important;
+}
+
+.react-multi-carousel-dot-list {
+  bottom: 0.5rem !important;
+  z-index: 0 !important;
+  width: min-content !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+.react-multiple-carousel__arrow:hover {
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+
+.react-multi-carousel-dot button {
+  border: none !important;
+  z-index: 0 !important;
+  height: 3px !important;
+  width: 17px !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 2px !important;
+}
+
+.react-multi-carousel-dot--active button {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.react-multiple-carousel__arrow--right {
+  right: calc(2% + 1px) !important;
+}
+
+.react-multiple-carousel__arrow--left {
+  left: calc(2% + 1px) !important;
+}
