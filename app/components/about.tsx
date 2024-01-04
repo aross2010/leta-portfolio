@@ -1,5 +1,4 @@
 import React from 'react'
-import SectionHeader from './ui/section-header'
 import Section from './ui/section'
 import profilePicture from '@/public/profile.png'
 import { links } from '../lib/data'
@@ -22,6 +21,7 @@ export default function About() {
               return (
                 <a
                   href={link.href}
+                  key={index}
                   target="_blank"
                   className="hover:bg-[#93bb76] p-1.5 text-gray-700 transition-all rounded-full "
                 >

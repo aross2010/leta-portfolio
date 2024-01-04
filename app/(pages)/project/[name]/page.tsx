@@ -16,6 +16,10 @@ type ImageModal = {
 }
 
 export default function Project({ params }: { params: { name: string } }) {
+  const [imageModal, setImageModal] = useState<ImageModal>({
+    open: false,
+    image: null,
+  })
   const index = projectsData.findIndex((project) => {
     return project.path === params.name
   })
@@ -36,10 +40,6 @@ export default function Project({ params }: { params: { name: string } }) {
     secondaryColorText,
     secondaryColorBorder,
   } = projectsData[index]
-  const [imageModal, setImageModal] = useState<ImageModal>({
-    open: false,
-    image: null,
-  })
 
   const projectDetailTemplate = (data: CarouselData, bg: boolean) => {
     return (
