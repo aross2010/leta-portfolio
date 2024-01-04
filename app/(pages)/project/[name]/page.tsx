@@ -8,6 +8,7 @@ import { HiDownload } from 'react-icons/hi'
 import { MdFullscreen } from 'react-icons/md'
 import Image, { StaticImageData } from 'next/image'
 import ProjectImgModal from '@/app/components/ui/project-img-modal'
+import { redirect } from 'next/navigation'
 
 type ImageModal = {
   open: boolean
@@ -20,7 +21,7 @@ export default function Project({ params }: { params: { name: string } }) {
   })
 
   if (index === -1) {
-    return <div>404</div>
+    return redirect('/')
   }
 
   const {
@@ -91,7 +92,7 @@ export default function Project({ params }: { params: { name: string } }) {
                 className={`${secondaryColorText} flex items-center text-[20px] gap-2`}
               >
                 {icons.map((icon, index) => {
-                  return icon
+                  return <Fragment key={index}>{icon}</Fragment>
                 })}
               </div>
               {headers.map((header, index) => {
@@ -149,9 +150,13 @@ export default function Project({ params }: { params: { name: string } }) {
                 <div className="w-full">
                   <CarouselComponent isAutoPlay={!imageModal.open}>
                     {section.carouselData.map((data, index) => {
-                      return projectDetailTemplate(
-                        data,
-                        section.title === 'Technical Drawings'
+                      return (
+                        <Fragment key={index}>
+                          {projectDetailTemplate(
+                            data,
+                            section.title === 'Technical Drawings'
+                          )}
+                        </Fragment>
                       )
                     })}
                   </CarouselComponent>
