@@ -27,7 +27,7 @@ import beauty7 from '@/public/projects/BeautyofJoseon/Technical Drawings/BOJAXON
 import beauty8 from '@/public/projects/BeautyofJoseon/Technical Drawings/BOJBUBBLEDIAGRAM.png'
 import beauty9 from '@/public/projects/BeautyofJoseon/Technical Drawings/BOJFLOORPLAN.png'
 import beauty10 from '@/public/projects/BeautyofJoseon/Technical Drawings/BOJRCP.png'
-import beauty11 from '@/public/projects/BeautyofJoseon/Technical Drawings/BOJSECTION.png'
+import beauty11 from '@/public/projects/BeautyofJoseon/Technical Drawings/BOJSECTIOn.png'
 
 import restRender1 from '@/public/projects/UniversalRestroom/Renders/RENDER1.png'
 import restRender2 from '@/public/projects/UniversalRestroom/Renders/RENDER2.png'
