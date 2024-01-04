@@ -12,7 +12,7 @@ import { redirect } from 'next/navigation'
 
 type ImageModal = {
   open: boolean
-  image: StaticImageData | null
+  image: JSX.Element | null
 }
 
 export default function Project({ params }: { params: { name: string } }) {
@@ -63,7 +63,13 @@ export default function Project({ params }: { params: { name: string } }) {
           onClick={() =>
             setImageModal({
               open: true,
-              image: data.image,
+              image: (
+                <Image
+                  src={data.image}
+                  alt="Project Image"
+                  className="object-cover object-center h-[700px] w-auto rounded-lg"
+                />
+              ),
             })
           }
           className="z-[10] absolute bottom-2 right-3"

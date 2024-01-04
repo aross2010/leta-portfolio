@@ -1,5 +1,5 @@
 'use client'
-import { Fragment, useRef, useState } from 'react'
+import React, { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import Image, { StaticImageData } from 'next/image'
 import { MdCloseFullscreen } from 'react-icons/md'
@@ -7,12 +7,12 @@ import { MdCloseFullscreen } from 'react-icons/md'
 type ProjectImgModal = {
   imageModal: {
     open: boolean
-    image: StaticImageData | null
+    image: JSX.Element | null
   }
   setImageModal: React.Dispatch<
     React.SetStateAction<{
       open: boolean
-      image: StaticImageData | null
+      image: JSX.Element | null
     }>
   >
 }
@@ -60,11 +60,7 @@ export default function ProjectImgModal({
               <Dialog.Panel className="relative transform bg-transparent rounded-lg transition-all sm:my-8 ">
                 {imageModal.image && (
                   <div className="relative">
-                    <Image
-                      src={imageModal.image}
-                      alt="Project Image"
-                      className="object-cover object-center h-[700px] w-auto rounded-lg shadow-lg"
-                    />
+                    {imageModal.image}
                     <button
                       onClick={() => {
                         setImageModal({ open: false, image: null })
