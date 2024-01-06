@@ -23,6 +23,16 @@ export type ProjectDetailed = {
   }
 }
 
+export type Section = {
+  title: string
+  description: string
+  carouselData: {
+    image: StaticImageData
+    title: string
+    description: string
+  }[]
+}
+
 export type CarouselData = {
   image: StaticImageData
   title: string

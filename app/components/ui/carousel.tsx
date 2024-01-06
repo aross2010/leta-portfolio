@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
@@ -22,8 +23,7 @@ export default function CarouselComponent({
     <Carousel
       infinite
       autoPlay={isAutoPlay}
-      ssr
-      autoPlaySpeed={5000}
+      autoPlaySpeed={7500}
       responsive={responsive}
       removeArrowOnDeviceType={['mobile']}
       containerClass="rounded-lg shadow-xl"
