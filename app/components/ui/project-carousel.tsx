@@ -33,7 +33,10 @@ export default function ProjectCarousel({
         {section.carouselData.map((data, index) => {
           const { image, title } = data
           return (
-            <div className={`relative shadow-lg border rounded-lg`}>
+            <div
+              key={index}
+              className={`relative shadow-lg border rounded-lg`}
+            >
               <Image
                 src={image}
                 alt="title"
