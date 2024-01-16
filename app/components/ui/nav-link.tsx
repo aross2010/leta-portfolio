@@ -36,12 +36,16 @@ export default function NavLink({
   return (
     <Fragment>
       <Link
-        className=" text-gray-600 uppercase tracking-wider text-xs rounded-lg relative hover:text-gray-950 transition-colors"
+        className={`uppercase tracking-wider text-xs rounded-lg relative ${
+          isHovered ? 'text-gray-900' : 'text-gray-600'
+        } transition-colors`}
         href={href}
         onFocus={handleHover}
         onBlur={handleBlur}
         onMouseEnter={handleHover}
         onMouseLeave={handleBlur}
+        onClick={() => setIsHovered(false)}
+        scroll={true}
         target={external ? '_blank' : '_self'}
       >
         <span>{name}</span>

@@ -10,7 +10,7 @@ export default function Intro() {
 
   return (
     <section
-      className="w-full max-w-[1200px] mx-auto flex flex-col justify-center items-center scroll-mt-24 "
+      className="w-full max-w-[1200px] mx-auto flex flex-col scroll-mt-48 justify-center items-center"
       id="/"
     >
       <div className="relative md:mb-6 mb-3 w-full flex md:flex-row flex-col items-center justify-center">
@@ -26,7 +26,7 @@ export default function Intro() {
             type: 'spring',
             stiffness: 100,
           }}
-          className="uppercase font-medium text-4xl absolute md:block hidden top-1/2 z-[5]"
+          className="uppercase text-4xl absolute md:block hidden top-1/2 z-[5]"
         >
           {name}
         </motion.h2>

@@ -10,6 +10,7 @@ import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import ProjectCarousel from '@/app/components/ui/project-carousel'
 import ProjectSection from '@/app/components/ui/project-section'
+import ScrollUp from '@/app/components/ui/scroll-up'
 
 export default function Project({ params }: { params: { name: string } }) {
   const index = projectsData.findIndex((project) => {
@@ -33,20 +34,6 @@ export default function Project({ params }: { params: { name: string } }) {
     secondaryColorBorder,
   } = projectsData[index]
 
-  // const fadeInAnimationVariants = {
-  //   initial: {
-  //     opacity: 0,
-  //     y: -100,
-  //   },
-  //   animate: (index: number) => ({
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: {
-  //       delay: 0.1 * index,
-  //     },
-  //   }),
-  // }
-
   const projectIcons = (
     <ul className={`${secondaryColorText} flex items-center text-[20px] gap-2`}>
       {' '}
@@ -61,14 +48,6 @@ export default function Project({ params }: { params: { name: string } }) {
               type: 'spring',
               stiffness: 75,
             }}
-
-            // variants={fadeInAnimationVariants}
-            // whileInView="animate"
-            // viewport={{
-            //   once: true,
-            // }}
-            // initial="initial"
-            // custom={index}
           >
             {icon}
           </motion.li>
@@ -78,14 +57,7 @@ export default function Project({ params }: { params: { name: string } }) {
   )
 
   const projectHeaders = (
-    <ul
-    // initial={{ opacity: 0 }}
-    // animate={{ opacity: 1 }}
-    // transition={{
-    //   duration: 1,
-    //   delay: 0.5,
-    // }}
-    >
+    <ul>
       {' '}
       {headers.map((header, index) => {
         return (
@@ -128,7 +100,12 @@ export default function Project({ params }: { params: { name: string } }) {
 
   return (
     <Fragment>
-      <section className="flex flex-col w-full max-w-[1200px] scroll-mt-48 text-gray-700">
+      {/* <ScrollUp /> */}
+
+      <section
+        id="project"
+        className="flex flex-col w-full max-w-[1200px] scroll-mt-[30rem] text-gray-700"
+      >
         <h1
           className={`xl:text-3xl text-2xl font-medium ${primaryColorText} mb-8 uppercase tracking-wider`}
         >

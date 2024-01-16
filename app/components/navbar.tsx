@@ -35,10 +35,26 @@ export default function Navbar() {
       }
     }
 
+    const handleMouseClick = (event: MouseEvent) => {
+      if (
+        ref.current &&
+        navRef.current &&
+        !ref.current.contains(event.target as Node) &&
+        !navRef.current.contains(event.target as Node)
+      ) {
+        // Clicked outside the dropdown or the trigger element
+
+        event.preventDefault()
+        setIsProjectsOpen(false)
+      }
+    }
+
     document.addEventListener('mousemove', handleMouseExit)
+    document.addEventListener('click', handleMouseClick)
 
     return () => {
       document.removeEventListener('mousemove', handleMouseExit)
+      document.removeEventListener('click', handleMouseClick)
     }
   }, [])
 
@@ -54,7 +70,7 @@ export default function Navbar() {
       transition={{
         duration: 0.4,
       }}
-      className="border-b absolute top-0 mt-[43px] border-l border-r overflow-hidden flex flex-col"
+      className="border-b absolute top-0 mt-[43px] shadow-md border-l border-r overflow-hidden rounded-b-md flex flex-col"
     >
       {projectsData.map((project, index) => {
         return (
@@ -63,8 +79,10 @@ export default function Navbar() {
             key={index}
             onClick={() => setIsProjectsOpen(false)}
             className={`${
-              index % 2 !== 0 ? 'bg-gray-100' : 'bg-gray-50'
-            } px-3 py-3 text-xs uppercase tracking-wider hover:bg-gray-300 transition-colors`}
+              index !== projectsData.length - 1
+                ? 'border-b border-gray-200'
+                : ''
+            } px-3 py-3 text-xs uppercase tracking-wider bg-gray-100 hover:bg-gray-300 transition-colors`}
           >
             {project.title}
           </Link>
@@ -76,14 +94,11 @@ export default function Navbar() {
   return (
     <header
       ref={navRef}
-      className="flex justify-center bg-gray-100/75 sticky top-0 z-[10] h-[70px] backdrop-blur-[0.5rem]"
+      className="flex justify-center bg-gray-100/75 top-0 sticky z-[10] h-[70px] backdrop-blur-[0.5rem]"
     >
       <nav className=" xl:px-0 px-4 flex items-center justify-between w-full max-w-[1200px] relative py-6">
         <div>
-          <Link
-            href="/"
-            className=""
-          >
+          <Link href="/">
             <Image
               priority={true}
               src={logoSm}

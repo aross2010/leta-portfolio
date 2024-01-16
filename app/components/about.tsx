@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full max-w-[1200px] mx-auto scroll-mt-24"
+      className="w-full max-w-[1200px] mx-auto scroll-mt-24 "
     >
       <motion.h2
         initial={{
@@ -344,7 +344,6 @@ export default function About() {
 
             <ul className="flex flex-wrap gap-3 mb-8">
               {aboutData.skills.map((skill, index) => {
-                console.log('INDEX: ', index, 1 + 0.1 * index)
                 return (
                   <motion.li
                     key={index}
