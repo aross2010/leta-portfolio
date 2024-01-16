@@ -22,7 +22,7 @@ export default function RootLayout({
       className="!scroll-smooth"
     >
       <body
-        className={`${inter.className} font-leta  bg-gray-50 text-gray-950`}
+        className={`${inter.className} font-leta  bg-gray-50 text-gray-950 overflow-x-hidden`}
       >
         <Navbar />
         <main className="flex flex-col items-center gap-36 px-4 justify-center my-12 tracking-wide">
