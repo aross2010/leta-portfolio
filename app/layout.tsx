@@ -25,7 +25,7 @@ export default function RootLayout({
         className={`${inter.className} font-leta  bg-gray-50 text-gray-950 overflow-x-hidden`}
       >
         <Navbar />
-        <main className="flex flex-col items-center gap-36 px-4 justify-center my-12 tracking-wide">
+        <main className="flex flex-col items-center gap-36 px-4 justify-center my-12 tracking-wide overflow-x-hidden">
           {children}
         </main>
         <Footer />
