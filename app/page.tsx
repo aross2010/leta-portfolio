@@ -1,14 +1,15 @@
 import Image from 'next/image'
-import About from './components/about'
+import Intro from './components/intro'
 import Projects from './components/projects'
-import Contact from './components/contact'
 import { Fragment } from 'react'
+import About from './components/about'
 
 export default function Home() {
   return (
     <Fragment>
-      <About />
+      <Intro />
       <Projects />
+      <About />
     </Fragment>
   )
 }

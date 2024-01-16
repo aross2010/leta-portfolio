@@ -9,6 +9,7 @@ import { HiDownload } from 'react-icons/hi'
 import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import ProjectCarousel from '@/app/components/ui/project-carousel'
+import ProjectSection from '@/app/components/ui/project-section'
 
 export default function Project({ params }: { params: { name: string } }) {
   const index = projectsData.findIndex((project) => {
@@ -25,26 +26,26 @@ export default function Project({ params }: { params: { name: string } }) {
     brief,
     sections,
     icons,
-    headerImage,
+    moodBoard,
     pdf,
     primaryColorText,
     secondaryColorText,
     secondaryColorBorder,
   } = projectsData[index]
 
-  const fadeInAnimationVariants = {
-    initial: {
-      opacity: 0,
-      y: -100,
-    },
-    animate: (index: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.1 * index, // stagger the animations by 0.05s
-      },
-    }),
-  }
+  // const fadeInAnimationVariants = {
+  //   initial: {
+  //     opacity: 0,
+  //     y: -100,
+  //   },
+  //   animate: (index: number) => ({
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       delay: 0.1 * index,
+  //     },
+  //   }),
+  // }
 
   const projectIcons = (
     <ul className={`${secondaryColorText} flex items-center text-[20px] gap-2`}>
@@ -53,13 +54,21 @@ export default function Project({ params }: { params: { name: string } }) {
         return (
           <motion.li
             key={index}
-            variants={fadeInAnimationVariants}
-            whileInView="animate"
-            viewport={{
-              once: true,
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.1 * index,
+              type: 'spring',
+              stiffness: 75,
             }}
-            initial="initial"
-            custom={index}
+
+            // variants={fadeInAnimationVariants}
+            // whileInView="animate"
+            // viewport={{
+            //   once: true,
+            // }}
+            // initial="initial"
+            // custom={index}
           >
             {icon}
           </motion.li>
@@ -69,58 +78,47 @@ export default function Project({ params }: { params: { name: string } }) {
   )
 
   const projectHeaders = (
-    <motion.ul
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        duration: 1,
-        delay: 0.75,
-      }}
+    <ul
+    // initial={{ opacity: 0 }}
+    // animate={{ opacity: 1 }}
+    // transition={{
+    //   duration: 1,
+    //   delay: 0.5,
+    // }}
     >
       {' '}
       {headers.map((header, index) => {
         return (
-          <div
+          <motion.li
             key={index}
             className="flex gap-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              delay: 0.25 * index,
+              duration: 1,
+            }}
           >
             <h4 className="font-semibold">
               {header.title}:{'  '}
             </h4>
             <p>{header.value}</p>
-          </div>
+          </motion.li>
         )
       })}
-    </motion.ul>
+    </ul>
   )
 
   const projectSections = (
     <div className="flex flex-col gap-24">
       {sections.map((section, index) => {
         return (
-          <div
-            className={`flex flex-col gap-6 ${
-              index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
-            }`}
+          <ProjectSection
             key={index}
-          >
-            <h2
-              className={`font-medium text-xl  border-b py-2 uppercase tracking-wider ${secondaryColorBorder} ${secondaryColorText}`}
-            >
-              {section.title}
-            </h2>
-            <div className="w-full">
-              <ProjectCarousel
-                section={section}
-                bgWhite={section.title === 'Technical Drawings'}
-              />
-            </div>
-            <div className="w-full">
-              <p className="text-sm whitespace-pre-line rounded-lg">
-                {section.description}
-              </p>
-            </div>
-          </div>
+            section={section}
+            secondaryColorBorder={secondaryColorBorder}
+            secondaryColorText={secondaryColorText}
+          />
         )
       })}
     </div>
@@ -130,9 +128,9 @@ export default function Project({ params }: { params: { name: string } }) {
 
   return (
     <Fragment>
-      <section className="flex flex-col w-full max-w-[1200px] text-gray-700">
+      <section className="flex flex-col w-full max-w-[1200px] scroll-mt-48 text-gray-700">
         <h1
-          className={`text-3xl font-medium ${primaryColorText} mb-8 uppercase tracking-wider`}
+          className={`xl:text-3xl text-2xl font-medium ${primaryColorText} mb-8 uppercase tracking-wider`}
         >
           <AnimatePresence>
             {letters.map((letter, index) => (
@@ -148,31 +146,79 @@ export default function Project({ params }: { params: { name: string } }) {
             ))}
           </AnimatePresence>
         </h1>
-        <div className="flex mb-24 items-center">
-          <div className="w-1/2">
-            <div className="flex flex-col gap-1 mb-12 text-sm">
+        <div className="flex mb-24 md:flex-row flex-col items-center">
+          <div className="md:w-1/2 w-full">
+            <div className="flex flex-col gap-1 md:mb-12 mb-6 text-sm">
               {projectIcons}
               {projectHeaders}
             </div>
-            <p className="text-sm whitespace-pre-line mb-6 lg:w-[70%]">
-              {brief}
-            </p>
-            <a
-              download
-              href={pdf}
-              className={`group inline-block py-2 px-3 uppercase tracking-wider text-xs font-medium border ${secondaryColorBorder} ${secondaryColorText} rounded-full cursor-pointer hover:scale-105 focus:scale-105 active:scale-95 transition`}
+            <motion.div
+              className="md:w-1/2 w-full md:hidden mb-6 "
+              initial={{ opacity: 0, scale: 0.75 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+                type: 'spring',
+                stiffness: 50,
+              }}
             >
-              PDF Version
-              <HiDownload
-                className={`inline-block group-hover:translate-y-0.5 ml-1 ${secondaryColorText} transition`}
+              <Image
+                src={moodBoard}
+                alt="BOJ"
+                className="w-full rounded-lg shadow-lg border"
               />
-            </a>
+            </motion.div>
+            <motion.p
+              className="text-sm whitespace-pre-line md:mb-6 mb-3 xl:w-[70%] md:w-[85%]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 1,
+                delay: 0.5,
+              }}
+            >
+              {brief}
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: 1.25,
+                type: 'spring',
+                stiffness: 75,
+              }}
+            >
+              <a
+                target="_blank"
+                href={pdf}
+                className={`group inline-block py-2 px-3 uppercase tracking-wider text-xs font-medium border ${secondaryColorBorder} ${secondaryColorText} rounded-full cursor-pointer hover:scale-105 focus:scale-105 active:scale-95 transition`}
+              >
+                Project PDF
+                <HiDownload
+                  className={`inline-block group-hover:translate-y-0.5 ml-1 ${secondaryColorText} transition`}
+                />
+              </a>
+            </motion.div>
           </div>
-          <Image
-            src={headerImage}
-            alt="BOJ"
-            className="w-1/2 rounded-lg shadow-lg border"
-          />
+          <motion.div
+            className="md:w-1/2 w-full md:block hidden"
+            initial={{ opacity: 0, scale: 0.75 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.5,
+              type: 'spring',
+              stiffness: 50,
+            }}
+          >
+            <Image
+              src={moodBoard}
+              alt="BOJ"
+              className="w-full rounded-lg shadow-lg border"
+            />
+          </motion.div>
         </div>
         {projectSections}
       </section>

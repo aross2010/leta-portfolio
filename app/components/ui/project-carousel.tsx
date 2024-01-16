@@ -35,7 +35,7 @@ export default function ProjectCarousel({
           return (
             <div
               key={index}
-              className={`relative shadow-lg border rounded-lg`}
+              className={`relative `}
             >
               <Image
                 src={image}
@@ -49,7 +49,7 @@ export default function ProjectCarousel({
               <h3
                 className={`absolute ${
                   bgWhite ? 'text-gray-300' : 'text-white'
-                } bottom-2 left-3  text-xl font-semibold `}
+                } md:bottom-2 md:left-3 bottom-1 left-2  md:text-xl font-semibold `}
               >
                 {title}
               </h3>
@@ -62,7 +62,7 @@ export default function ProjectCarousel({
                       <Image
                         src={image}
                         alt="Project Image"
-                        className="object-cover object-center h-[700px] w-auto rounded-lg"
+                        className="object-cover object-center w-full rounded-lg lg:max-h-[90vh]"
                       />
                     ),
                   })

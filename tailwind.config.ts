@@ -7,15 +7,16 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      leta: ['Montserrat', 'sans-serif'],
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      colors: {
-        beautyGreen: '#abc39a',
-        beautyPink: '#cebfbf',
+      screens: {
+        xl: '1200px',
+        lg: '1050px',
+        md: '850px',
+        sm: '700px',
+        xs: '400px',
       },
     },
   },

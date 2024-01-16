@@ -47,7 +47,7 @@ export default function ProjectImgModal({
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 w-full overflow-y-auto">
-          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+          <div className="flex min-h-full items-start justify-center p-4 text-center sm:items-center sm:p-4">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -65,7 +65,7 @@ export default function ProjectImgModal({
                       onClick={() => {
                         setImageModal({ open: false, image: null })
                       }}
-                      className="absolute bottom-3 right-3"
+                      className="absolute bottom-3 right-3 outline-none"
                     >
                       <MdCloseFullscreen className="text-gray-200 hover:text-gray-600 transition-colors w-6 h-6" />
                     </button>

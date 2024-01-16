@@ -1,50 +1,78 @@
 'use client'
-import React, { Fragment } from 'react'
-import Link from 'next/link'
-import Section from './ui/section'
+import React, { Fragment, useRef } from 'react'
+import { motion } from 'framer-motion'
+import { projectsData } from '../lib/data'
 
-import { Project } from '../lib/types'
-import { projects } from '../lib/data'
-import CarouselComponent from './ui/carousel'
+import ProjectHome from './ui/project-home'
 
 export default function Projects() {
-  const projectTemplate = (project: Project) => {
-    return (
-      <Fragment>
-        <Link href={project.link}>
-          <div
-            className="relative flex w-full h-[500px] bg-cover bg-center rounded-lg cursor-pointer"
-            style={{
-              backgroundImage: `url(${project.image.src})`,
-            }}
-          >
-            <h3 className="mt-auto ml-4 mb-4 text-white text-3xl font-semibold">
-              {project.name}
-            </h3>
-          </div>
-        </Link>
-        <div className="mt-1"></div>
-      </Fragment>
-    )
-  }
+  const ref = useRef<HTMLDivElement>(null)
 
   return (
-    <Section id="projects">
-      {/* <SectionHeader>Projects</SectionHeader> */}
-      <div className="w-full">
-        <CarouselComponent>
-          {projects.map((project, index) => {
-            return (
-              <div
-                key={index}
-                className="w-full"
-              >
-                {projectTemplate(project)}
-              </div>
-            )
-          })}
-        </CarouselComponent>
+    <section
+      id="projects"
+      ref={ref}
+      className="w-full max-w-[1200px] mx-auto scroll-mt-24"
+    >
+      <div className="flex justify-between items-center pb-2">
+        <motion.h2
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="uppercase tracking-wider font-medium md:text-3xl text-2xl"
+        >
+          Projects
+        </motion.h2>
+        <motion.h4
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 1,
+            delay: 1.5,
+          }}
+          className="md:text-xl text-lg text-gray-700 italic"
+        >
+          2023 — {new Date().getFullYear()}
+        </motion.h4>
       </div>
-    </Section>
+
+      <motion.div
+        initial={{ width: '0%' }}
+        whileInView={{ width: '100%' }}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          duration: 1,
+          delay: 0.5,
+        }}
+        className="border-b-[0.5px] border-gray-400"
+      />
+
+      {projectsData.map((project, index) => {
+        return (
+          <ProjectHome
+            key={index}
+            project={project}
+          />
+        )
+      })}
+    </section>
   )
 }
