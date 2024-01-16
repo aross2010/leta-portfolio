@@ -194,7 +194,7 @@ export default function Project({ params }: { params: { name: string } }) {
             <Image
               priority={true}
               src={moodBoard}
-              alt="BOJ"
+              alt={`${title} mood board`}
               className="w-full rounded-lg shadow-lg border"
             />
           </motion.div>

@@ -15,8 +15,8 @@ import { IoMdMail } from 'react-icons/io'
 
 import bojMoodBoard from '@/public/projects/BeautyofJoseon/boj-mood-board.png'
 
-import beauty1 from '@/public/projects/BeautyofJoseon/Renders/1-BREAKRENDER.jpg'
-import beauty2 from '@/public/projects/BeautyofJoseon/Renders/2-LOBBYRENDER.jpg'
+import beauty1 from '@/public/projects/BeautyofJoseon/Renders/1-BREAKRENDER.png'
+import beauty2 from '@/public/projects/BeautyofJoseon/Renders/2-LOBBYRENDER.png'
 import beauty3 from '@/public/projects/BeautyofJoseon/Renders/3-BREAKROOM.png'
 import beauty4 from '@/public/projects/BeautyofJoseon/Renders/4-LOUNGE.png'
 import beauty5 from '@/public/projects/BeautyofJoseon/Renders/5-WHITERENDER.png'
@@ -29,7 +29,7 @@ import beauty9 from '@/public/projects/BeautyofJoseon/Technical Drawings/BOJFLOO
 import beauty10 from '@/public/projects/BeautyofJoseon/Technical Drawings/BOJRCP.png'
 import beauty11 from '@/public/projects/BeautyofJoseon/Technical Drawings/BOJSECTIOn.png'
 
-import restroomMoodBoard from '@/public/projects/UniversalRestroom/bathroom-mood-board.jpg'
+import restroomMoodBoard from '@/public/projects/UniversalRestroom/bathroom-mood-board.png'
 
 import restRender1 from '@/public/projects/UniversalRestroom/Renders/RENDER1.png'
 import restRender2 from '@/public/projects/UniversalRestroom/Renders/RENDER2.png'
@@ -42,7 +42,7 @@ import restDraw5 from '@/public/projects/UniversalRestroom/Technical Drawings/5-
 import restDraw6 from '@/public/projects/UniversalRestroom/Technical Drawings/6-AGRSECTION2.png'
 import path from 'path'
 
-import biblioMoodBoard from '@/public/projects/Biblio/bibliomoodboard.jpg'
+import biblioMoodBoard from '@/public/projects/Biblio/bibliomoodboard.png'
 
 import biblioRender1 from '@/public/projects/Biblio/Renders/Exterior1.png'
 import biblioRender2 from '@/public/projects/Biblio/Renders/Exterior2.png'
@@ -69,7 +69,7 @@ import biblioDev2 from '@/public/projects/Biblio/Development/CONCEPT.png'
 import biblioDev3 from '@/public/projects/Biblio/Development/PHYSICAL1.png'
 import biblioDev4 from '@/public/projects/Biblio/Development/PHYSICAL2.png'
 
-import workMoodBoard from '@/public/projects/WorkshopResidence/WRKSHOPRESIDENCEMOODBOARD.jpg'
+import workMoodBoard from '@/public/projects/WorkshopResidence/WRKSHOPRESIDENCEMOODBOARD.png'
 
 import workRender1 from '@/public/projects/WorkshopResidence/Renders/Breakroom.png'
 import workRender2 from '@/public/projects/WorkshopResidence/Renders/Gallery.png'
@@ -82,13 +82,13 @@ import workDraw4 from '@/public/projects/WorkshopResidence/Technical Drawings/Se
 import workDraw5 from '@/public/projects/WorkshopResidence/Technical Drawings/AXON.png'
 import workDraw6 from '@/public/projects/WorkshopResidence/Technical Drawings/TumbleBubble.png'
 
-import workDev1 from '@/public/projects/WorkshopResidence/Development/screenphysical_pic1.jpg'
-import workDev2 from '@/public/projects/WorkshopResidence/Development/screenpic.jpg'
-import workDev3 from '@/public/projects/WorkshopResidence/Development/Ortho1.jpg'
-import workDev4 from '@/public/projects/WorkshopResidence/Development/ortho-02.jpg'
-import workDev5 from '@/public/projects/WorkshopResidence/Development/ortho-03.jpg'
-import workDev6 from '@/public/projects/WorkshopResidence/Development/ortho-04.jpg'
-import workDev7 from '@/public/projects/WorkshopResidence/Development/ortho-05.jpg'
+import workDev1 from '@/public/projects/WorkshopResidence/Development/screenphysical_pic1.png'
+import workDev2 from '@/public/projects/WorkshopResidence/Development/screenpic.png'
+import workDev3 from '@/public/projects/WorkshopResidence/Development/Ortho1.png'
+import workDev4 from '@/public/projects/WorkshopResidence/Development/ortho-02.png'
+import workDev5 from '@/public/projects/WorkshopResidence/Development/ortho-03.png'
+import workDev6 from '@/public/projects/WorkshopResidence/Development/ortho-04.png'
+import workDev7 from '@/public/projects/WorkshopResidence/Development/ortho-05.png'
 
 export const projectsData = [
   {
