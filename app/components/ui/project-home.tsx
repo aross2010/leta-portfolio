@@ -129,6 +129,7 @@ export default function ProjectHome({ project }: ProjectHomeProps) {
           }}
         >
           <Image
+            priority={true}
             src={project.thumbnailImage}
             alt={project.title}
             className="xl:h-[375px] md:h-[325px] h-auto xl:w-[750px] w-full object-center md:rounded-lg rounded-md shadow-lg object-cover xl:group-hover:scale-105 transition-all duration-300 ease-in-out z-[-1]"

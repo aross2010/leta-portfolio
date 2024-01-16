@@ -85,6 +85,7 @@ export default function Navbar() {
             className=""
           >
             <Image
+              priority={true}
               src={logoSm}
               alt="LP Designs"
               width={45}

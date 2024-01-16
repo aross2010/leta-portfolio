@@ -164,6 +164,7 @@ export default function Project({ params }: { params: { name: string } }) {
               }}
             >
               <Image
+                priority={true}
                 src={moodBoard}
                 alt="BOJ"
                 className="w-full rounded-lg shadow-lg border"
@@ -214,6 +215,7 @@ export default function Project({ params }: { params: { name: string } }) {
             }}
           >
             <Image
+              priority={true}
               src={moodBoard}
               alt="BOJ"
               className="w-full rounded-lg shadow-lg border"

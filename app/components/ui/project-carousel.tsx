@@ -22,7 +22,7 @@ export default function ProjectCarousel({
   section,
   bgWhite,
 }: ProjectCarouselProps) {
-  const [imageModal, setImageModal] = useState<ImageModal>({
+  const [imageModal, setImageModal] = useState<Image priority={true}Modal>({
     open: false,
     image: null,
   })
@@ -37,7 +37,7 @@ export default function ProjectCarousel({
               key={index}
               className={`relative `}
             >
-              <Image
+              <Image priority={true}
                 src={image}
                 alt="title"
                 priority
@@ -59,7 +59,7 @@ export default function ProjectCarousel({
                   setImageModal({
                     open: true,
                     image: (
-                      <Image
+                      <Image priority={true}
                         src={image}
                         alt="Project Image"
                         className="object-cover object-center w-full rounded-lg lg:max-h-[90vh]"
