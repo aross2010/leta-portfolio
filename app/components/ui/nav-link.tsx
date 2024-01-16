@@ -45,7 +45,6 @@ export default function NavLink({
         onMouseEnter={handleHover}
         onMouseLeave={handleBlur}
         onClick={() => setIsHovered(false)}
-        scroll={true}
         target={external ? '_blank' : '_self'}
       >
         <span>{name}</span>

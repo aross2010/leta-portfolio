@@ -7,7 +7,6 @@ import ScrollUp from './components/ui/scroll-up'
 export default function Home() {
   return (
     <Fragment>
-      <ScrollUp />
       <Intro />
       <Projects />
       <About />
