@@ -48,9 +48,8 @@ export default function Intro() {
             stiffness: 50,
           }}
         >
-          <Image
-            priority={true}
-            src={profileImage}
+          <img
+            src={profileImage.src}
             alt={`${name} portrait`}
             className="rounded-full sm:w-[275px] sm:h-[275px] w-[200px] h-[200px] shadow-xl object-cover object-center"
           />

@@ -140,10 +140,9 @@ export default function Project({ params }: { params: { name: string } }) {
                 stiffness: 50,
               }}
             >
-              <Image
-                priority={true}
-                src={moodBoard}
-                alt="BOJ"
+              <img
+                src={moodBoard.src}
+                alt={`${title} mood board`}
                 className="w-full rounded-lg shadow-lg border"
               />
             </motion.div>
@@ -191,10 +190,9 @@ export default function Project({ params }: { params: { name: string } }) {
               stiffness: 50,
             }}
           >
-            <Image
-              priority={true}
-              src={moodBoard}
-              alt="BOJ"
+            <img
+              src={moodBoard.src}
+              alt={`${title} mood board`}
               className="w-full rounded-lg shadow-lg border"
             />
           </motion.div>
