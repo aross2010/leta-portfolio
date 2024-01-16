@@ -37,8 +37,9 @@ export default function ProjectCarousel({
               key={index}
               className={`relative `}
             >
-              <img
-                src={image.src}
+              <Image
+                priority={true}
+                src={image}
                 alt="title"
                 className={`w-full max-h-[550px] object-center ${
                   bgWhite ? 'object-contain' : 'object-cover'
@@ -58,8 +59,9 @@ export default function ProjectCarousel({
                   setImageModal({
                     open: true,
                     image: (
-                      <img
-                        src={image.src}
+                      <Image
+                        priority={true}
+                        src={image}
                         alt="Project Image"
                         className="object-cover object-center w-full rounded-lg lg:max-h-[90vh]"
                       />

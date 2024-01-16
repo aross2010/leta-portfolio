@@ -99,11 +99,13 @@ export default function Navbar() {
       <nav className=" xl:px-0 px-4 flex items-center justify-between w-full max-w-[1200px] relative py-6">
         <div>
           <Link href="/">
-            <img
-              src={logoSm.src}
+            <Image
+              priority={true}
+              src={logoSm}
               alt="LP Designs"
               width={45}
               height={45}
+              quality={100}
               className="absolute transform -translate-y-1/2 "
             />
           </Link>
