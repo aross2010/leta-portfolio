@@ -89,6 +89,7 @@ import workDev5 from '@/public/projects/WorkshopResidence/Development/ortho-03.p
 import workDev6 from '@/public/projects/WorkshopResidence/Development/ortho-04.png'
 import workDev7 from '@/public/projects/WorkshopResidence/Development/ortho-05.png'
 
+
 export const projectsData = [
   {
     path: 'boj',
@@ -582,6 +583,9 @@ export const projectsData = [
             description:
               'This is a description of a carousel image. Leta needs to write these descriptions ASAP. Thanks!',
           },
+          {
+
+          }
         ],
       },
       {
