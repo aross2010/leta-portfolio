@@ -495,7 +495,7 @@ export const projectsData = [
             image: biblioDev1,
             title: 'Inspiration',
             description:
-              'These images inspired the form of the biblio.',
+              'These images inspired the form of the biblio. I was inspired by the form of books and a sense of curiosity. I was also inspired by arches, and the way light interacts with the shapes.',
           },
           {
             image: biblioDev2,
@@ -632,7 +632,7 @@ export const projectsData = [
       {
         title: 'Development',
         description:
-          'The space planning is derived from a wall-x tumble study, based on the Casa Poli house that features open flow circulation due to lack of walls. From this study, I derived the concepts of open flow and privacy through distance (height and depth).',
+          'Throughout the space, a screen that filters light and privacy is placed in key areas. This screen was birthed through a series of studies of different artist’s work. I chose Joanna Poag’s work because of her interest in utilizing different forms to communicate the movement of time, shapes, and stages of life. The space planning is derived from a wall-x tumble study, based on the Casa Poli house that features open flow circulation due to lack of walls. From this study, I derived the concepts of open flow and privacy through distance (height and depth).',
         carouselData: [
           {
             image: workDev1,
