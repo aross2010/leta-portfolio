@@ -495,7 +495,7 @@ export const projectsData = [
             image: biblioDev1,
             title: 'Inspiration',
             description:
-              'This is a description of a carousel image. Leta needs to write these descriptions ASAP. Thanks!',
+              'These images inspired the form of the biblio.',
           },
           {
             image: biblioDev2,
