@@ -583,9 +583,7 @@ export const projectsData = [
             description:
               'This is a description of a carousel image. Leta needs to write these descriptions ASAP. Thanks!',
           },
-          {
-
-          }
+         
         ],
       },
       {
@@ -682,7 +680,7 @@ export const projectsData = [
       },
     ],
   },
-]
+] 
 
 export const aboutData = {
   name: 'Leta Pham',
