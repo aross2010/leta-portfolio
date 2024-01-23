@@ -172,7 +172,7 @@ export const projectsData = [
             image: beauty5b,
             title: 'Special Area',
             description:
-              'This is a description of a carousel image. Leta needs to write these descriptions ASAP. Thanks!',
+              'This highlighted area is underneath the staircase. With limited interior space, I wanted to utilize every square inch and create a relaxing zen garden that will calm users when they pass by.',
           },
         ],
       },
@@ -260,12 +260,12 @@ export const projectsData = [
       },
     ],
     brief:
-      'The design challenge was to create an all gender restroom with ADA compliance.\n\nThe solution for this challenge was designing a bathroom with plenty of clearances for a comfortable experience, and finishes that made the space feel futuristic and clean for easy maintenance and gooduser-experience.\n\nIn terms of FF&E, the bathroom interior is inspired by futuristic spaceships so the materials reflect that. There is glossy epoxy, chrome, and stainless steel to allow for maximum glossiness to imply smooth clean surfaces that spaceships have.\n\n When picking this inspiration, the word ‘space’ was used quite literally because of the implementation of ADA clearances. The walkways have 5’-0” minimum clerance and the stalls are more spacious than stalls on normal occasion. There is an addition of a vanity space and a storage wall to provide amentities to users. These special features allow the user to feel like they have energize and tend to their needs in the bathroom, with lots of space in-between.',
+      'The design challenge was to create an all gender restroom with ADA compliance. The solution for this challenge was designing a bathroom with plenty of clearances for a comfortable experience, and finishes that made the space feel futuristic and clean for easy maintenance and good user-experience.',
     sections: [
       {
         title: 'Renders',
         description:
-          "Beauty of Joseon is a Korean skincare brand that focuses on using traditional Korean beauty and skincare practices, fusing it with natural ingredients to promote healthy skin.\n\nThe design challenge was to create a space that reflects their brand identity. Together, with traditional finishes mized with modern finishes, this space reflects the brand's mission to mix old practices with new ones.",
+          "In terms of FF&E, the bathroom interior is inspired by futuristic spaceships so the materials reflect that. There is glossy epoxy, chrome, and stainless steel to allow for maximum glossiness to imply smooth clean surfaces that spaceships have.",
         carouselData: [
           {
             image: restRender1,
@@ -284,7 +284,7 @@ export const projectsData = [
       {
         title: 'Technical Drawings',
         description:
-          "Beauty of Joseon is a Korean skincare brand that focuses on using traditional Korean beauty and skincare practices, fusing it with natural ingredients to promote healthy skin.\n\nThe design challenge was to create a space that reflects their brand identity. Together, with traditional finishes mized with modern finishes, this space reflects the brand's mission to mix old practices with new ones.",
+          "In terms of the space planning, the word ‘space’ was used quite literally because of the implementation of ADA clearances. The walkways have 5’-0” minimum clearance and the stalls are more spacious than stalls on normal occasions. There is an addition of a vanity space and a storage wall to provide amenities to users. These special features allow the user to feel like they are energized and can tend to their needs in the bathroom, with lots of space in-between.",
         carouselData: [
           {
             image: restDraw1,
@@ -501,7 +501,7 @@ export const projectsData = [
             image: biblioDev2,
             title: 'Concept',
             description:
-              'The concept of this project was "to jump inside of a good book". The idea was for user's to get lost in a good book literally.',
+              "The concept of this project was 'to jump inside of a good book'. The idea was for user's to get lost in a good book literally.",
           },
           {
             image: biblioDev3,
@@ -589,7 +589,7 @@ export const projectsData = [
       {
         title: 'Technical Drawings',
         description:
-          'Technical Drawings: A challenge in designing this space was that we were restricted in how many walls we were allowed to have, so how do we create privacy with open space?\n\n For the solution, space planning emphasizes privacy through distance. Privacy in the open space is achieved by having enclosed areas away from the facade, and having the screen model study placed in areas where it can block and diffuse light.',
+          'A challenge in designing this space was that we were restricted in how many walls we were allowed to have, so how do we create privacy with open space?\n\n For the solution, space planning emphasizes privacy through distance. Privacy in the open space is achieved by having enclosed areas away from the facade, and having the screen model study placed in areas where it can block and diffuse light.',
         carouselData: [
           {
             image: workDraw1,
@@ -638,19 +638,19 @@ export const projectsData = [
             image: workDev1,
             title: 'Final Screen',
             description:
-              'This is a description of a carousel image. Leta needs to write these descriptions ASAP. Thanks!',
+              'After three different prototypes, the final screen was born. It is made of vellum and construction paper.',
           },
           {
             image: workDev2,
             title: 'Screen Development',
             description:
-              'This is a description of a carousel image. Leta needs to write these descriptions ASAP. Thanks!',
+              'During the screen development I tried different variations of the form to see which one reflected the work of the artist best and the concept of the workshop residence. This variation played with more curved fins for privacy.',
           },
           {
             image: workDev3,
             title: 'Orthographic View 1',
             description:
-              'This is a description of a carousel image. Leta needs to write these descriptions ASAP. Thanks!',
+              'This is an orthographic drawing of a section I studied from the Casa Poli house in Chile.',
           },
           {
             image: workDev4,
