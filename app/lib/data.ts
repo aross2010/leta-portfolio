@@ -501,19 +501,19 @@ export const projectsData = [
             image: biblioDev2,
             title: 'Concept',
             description:
-              'This is a description of a carousel image. Leta needs to write these descriptions ASAP. Thanks!',
+              'The concept of this project was "to jump inside of a good book". The idea was for user's to get lost in a good book literally.',
           },
           {
             image: biblioDev3,
             title: 'Physical Model 1',
             description:
-              'This is a description of a carousel image. Leta needs to write these descriptions ASAP. Thanks!',
+              'For this project, we were required to make a physical model. This model was made with different thicknesses of museum board and construction paper.',
           },
           {
             image: biblioDev4,
             title: 'Physical Model 2',
             description:
-              'This is a description of a carousel image. Leta needs to write these descriptions ASAP. Thanks!',
+              'For this project, we were required to make a physical model. This model was made with different thicknesses of museum board and construction paper.',
           },
         ],
       },
