@@ -222,7 +222,7 @@ export const projectsData = [
   },
   {
     path: 'restroom',
-    title: 'Universal Gender Restroom',
+    title: 'Universal Gender Restroom YE',
     date: 'Fall 2023',
     projectFunction: 'Restroom',
     icons: [
