@@ -8,9 +8,14 @@ import Slideshow from '@/app/components/ui/slideshow'
 import Link from 'next/link'
 import { FaArrowDown } from 'react-icons/fa'
 
-export default function Experience({ params }: { params: { name: string } }) {
+export default function Experience({
+  params,
+}: {
+  params: Promise<{ name: string }>
+}) {
+  const { name } = React.use(params)
   const index = experiencesData.findIndex((experience) => {
-    return experience.path === params.name
+    return experience.path === name
   })
 
   if (index === -1) {

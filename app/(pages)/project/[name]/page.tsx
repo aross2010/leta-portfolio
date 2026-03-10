@@ -7,9 +7,14 @@ import { redirect } from 'next/navigation'
 import Slideshow from '@/app/components/ui/slideshow'
 import Link from 'next/link'
 
-export default function Project({ params }: { params: { name: string } }) {
+export default function Project({
+  params,
+}: {
+  params: Promise<{ name: string }>
+}) {
+  const { name } = React.use(params)
   const index = projectsData.findIndex((project) => {
-    return project.path === params.name
+    return project.path === name
   })
 
   if (index === -1) {

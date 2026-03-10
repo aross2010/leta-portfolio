@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="!scroll-smooth"
+      className="!scroll-smooth overflow-x-hidden"
     >
       <body
         className={`${inter.className} ${jost.className} bg-gray-50 text-gray-950 tracking-wide max-w-[100vw] overflow-x-hidden flex flex-col min-h-screen`}

@@ -8,7 +8,7 @@ import {
   SiSketchup,
 } from 'react-icons/si'
 import { enscapeSVG } from './icons'
-import profilePic from '@/public/Headshot.png'
+import profilePic from '@/public/headshot.png'
 import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 
