@@ -832,7 +832,7 @@ export const aboutData = {
     },
     {
       icon: FaLinkedin,
-      href: 'https://www.linkedin.com/in/leta-pham-ba85a3136/',
+      href: 'https://www.linkedin.com/in/letapham/',
     },
     {
       icon: FaYoutube,
