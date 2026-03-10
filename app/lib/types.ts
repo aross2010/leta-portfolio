@@ -1,47 +1,54 @@
 import { StaticImageData } from 'next/image'
 import React from 'react'
 
+export type Slideshow = {
+  image?: StaticImageData
+  youtubeUrl?: string
+}[]
+
 export type ProjectData = {
   path: string
   title: string
-  date: string
+  date: string // ex. 'Spring 2024'
   projectFunction: string
-  icons: React.ReactNode[]
-  moodBoard: StaticImageData
-  thumbnailImage: StaticImageData
-  pdf: string
-  backgroundColor: string
-  primaryColorText: string
-  secondaryColorText: string
-  secondaryColorBorder: string
+  icons: React.ReactNode[] // tech used
+  thumbnailImage: StaticImageData // for home page
+  pdf?: string // detailed look into project
   headers: {
     title: string
     value: string
   }[]
+  color: string
   brief: string
-  sections: {
+  slideshow: Slideshow
+  additionalSections?: {
     title: string
-    description: string
-    carouselData: {
-      image: StaticImageData
-      title: string
-      description: string
-    }[]
+    brief: string
+    slideshow: Slideshow
+    link?: string
   }[]
-}
-
-export type Section = {
-  title: string
-  description: string
-  carouselData: {
+  award?: {
     image: StaticImageData
-    title: string
-    description: string
-  }[]
+  }
 }
 
 export type CarouselData = {
   image: StaticImageData
   title: string
   description: string
+}
+
+export type ExperiencesData = {
+  path: string
+  title: string
+  experienceFunction: string
+  color: string
+  date: string
+  thumbnailImage: StaticImageData
+  brief: string
+  slideshow: Slideshow
+  videos?: {
+    url: string
+    title: string
+  }[]
 }

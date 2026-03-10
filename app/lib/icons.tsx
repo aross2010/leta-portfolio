@@ -2,7 +2,7 @@ export const enscapeSVG = (
   <svg
     stroke="currentColor"
     fill="currentColor"
-    stroke-width="0"
+    strokeWidth="0"
     version="1.1"
     viewBox="0 0 684 684"
     height="20px"

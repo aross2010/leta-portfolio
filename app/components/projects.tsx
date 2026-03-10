@@ -1,12 +1,25 @@
 'use client'
-import React, { Fragment, useRef } from 'react'
-import { motion } from 'framer-motion'
+import React, { Fragment, useRef, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { projectsData } from '../lib/data'
-
-import ProjectHome from './ui/project-home'
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
+import ProjectHome from './ui/home-display'
+import HomeDisplay from './ui/home-display'
 
 export default function Projects() {
   const ref = useRef<HTMLDivElement>(null)
+  const [expanded, setExpanded] = useState(false)
+
+  const handleToggle = () => {
+    if (expanded) {
+      setExpanded(false)
+      ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      setExpanded(true)
+    }
+  }
+
+  const visibleProjects = expanded ? projectsData : projectsData.slice(0, 3)
 
   return (
     <section
@@ -28,9 +41,9 @@ export default function Projects() {
           transition={{
             duration: 1,
           }}
-          className="uppercase tracking-wider font-medium md:text-3xl text-2xl"
+          className="font-bold tracking-wider text-gray-700 md:text-3xl text-2xl"
         >
-          Projects
+          projects
         </motion.h2>
         <motion.h4
           initial={{
@@ -65,14 +78,48 @@ export default function Projects() {
         className="border-b-[0.5px] border-gray-400"
       />
 
-      {projectsData.map((project, index) => {
-        return (
-          <ProjectHome
-            key={index}
-            project={project}
-          />
-        )
-      })}
+      {visibleProjects.map(
+        (
+          { title, projectFunction, color, thumbnailImage, path, date, award },
+          index,
+        ) => {
+          return (
+            <HomeDisplay
+              key={index}
+              type="project"
+              date={date}
+              title={title}
+              func={projectFunction}
+              color={color}
+              thumbnail={thumbnailImage}
+              path={path}
+              {...(award && { badge: award })}
+            />
+          )
+        },
+      )}
+
+      <motion.div
+        className="flex justify-center mt-12"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
+        <motion.button
+          onClick={() => handleToggle()}
+          animate={{ y: [0, -6, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+          className="flex flex-col items-center gap-1  tracking-wider text-xs font-medium text-gray-500 hover:text-gray-900 transition-colors group"
+        >
+          <span>{expanded ? 'view less' : 'view more'}</span>
+          {expanded ? (
+            <FiChevronUp className="text-lg group-hover:scale-110 transition-transform" />
+          ) : (
+            <FiChevronDown className="text-lg group-hover:scale-110 transition-transform" />
+          )}
+        </motion.button>
+      </motion.div>
     </section>
   )
 }

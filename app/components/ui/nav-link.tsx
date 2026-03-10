@@ -9,6 +9,7 @@ type NavLinkProps = {
   name: string
   href: string
   setIsProjectsOpen: React.Dispatch<React.SetStateAction<boolean>>
+  setIsExperiencesOpen?: React.Dispatch<React.SetStateAction<boolean>>
   external?: boolean
 } & React.HTMLAttributes<HTMLAnchorElement>
 
@@ -16,16 +17,22 @@ export default function NavLink({
   name,
   href,
   setIsProjectsOpen,
+  setIsExperiencesOpen,
   external,
 }: NavLinkProps) {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleHover = () => {
     setIsHovered(true)
-    if (name === 'Projects') {
+    if (name === 'projects') {
       setIsProjectsOpen(true)
+      setIsExperiencesOpen?.(false)
+    } else if (name === 'experiences') {
+      setIsProjectsOpen(false)
+      setIsExperiencesOpen?.(true)
     } else {
       setIsProjectsOpen(false)
+      setIsExperiencesOpen?.(false)
     }
   }
 
@@ -36,7 +43,7 @@ export default function NavLink({
   return (
     <Fragment>
       <Link
-        className={`uppercase tracking-wider text-xs rounded-lg relative ${
+        className={` tracking-wider sm:text-sm text-xs rounded-lg relative ${
           isHovered ? 'text-gray-900' : 'text-gray-600'
         } transition-colors`}
         href={href}

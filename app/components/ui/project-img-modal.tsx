@@ -1,38 +1,30 @@
 'use client'
-import React, { Fragment, useRef, useState } from 'react'
+import React, { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import Image, { StaticImageData } from 'next/image'
 import { MdCloseFullscreen } from 'react-icons/md'
+import { Slideshow as SlideshowType } from '@/app/lib/types'
+import Slideshow from './slideshow'
 
-type ProjectImgModal = {
-  imageModal: {
-    open: boolean
-    image: JSX.Element | null
-  }
-  setImageModal: React.Dispatch<
-    React.SetStateAction<{
-      open: boolean
-      image: JSX.Element | null
-    }>
-  >
+type ProjectImgModalProps = {
+  slideshow: SlideshowType
+  open: boolean
+  onClose: () => void
 }
 
 export default function ProjectImgModal({
-  imageModal,
-  setImageModal,
-}: ProjectImgModal) {
-  const cancelButtonRef = useRef(null)
-
+  slideshow,
+  open,
+  onClose,
+}: ProjectImgModalProps) {
   return (
     <Transition.Root
-      show={imageModal.open && imageModal.image !== null}
+      show={open}
       as={Fragment}
     >
       <Dialog
         as="div"
-        className="relative z-10"
-        initialFocus={cancelButtonRef}
-        onClose={() => setImageModal({ open: false, image: null })}
+        className="relative z-50"
+        onClose={onClose}
       >
         <Transition.Child
           as={Fragment}
@@ -43,37 +35,26 @@ export default function ProjectImgModal({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+          <div className="fixed inset-0 bg-black/90" />
         </Transition.Child>
 
-        <div className="fixed inset-0 z-10 w-full overflow-y-auto">
-          <div className="flex min-h-full items-start justify-center p-4 text-center sm:items-center sm:p-4">
-            <Transition.Child
-              as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-              enterTo="opacity-100 translate-y-0 sm:scale-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-              leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            >
-              <Dialog.Panel className="relative transform bg-transparent rounded-lg transition-all sm:my-8 ">
-                {imageModal.image && (
-                  <div className="relative">
-                    {imageModal.image}
-                    <button
-                      onClick={() => {
-                        setImageModal({ open: false, image: null })
-                      }}
-                      className="absolute bottom-3 right-3 outline-none"
-                    >
-                      <MdCloseFullscreen className="text-gray-200 hover:text-gray-600 transition-colors w-6 h-6" />
-                    </button>
-                  </div>
-                )}
-              </Dialog.Panel>
-            </Transition.Child>
-          </div>
+        <div className="fixed inset-0 flex items-center justify-center p-4">
+          <Dialog.Panel className="relative w-full max-w-7xl">
+            {open && (
+              <>
+                <Slideshow
+                  slideshow={slideshow}
+                  showFullscreen={false}
+                />
+                <button
+                  onClick={onClose}
+                  className="absolute bottom-3 right-3 z-20 outline-none"
+                >
+                  <MdCloseFullscreen className="text-gray-200 hover:text-white transition-colors md:w-6 md:h-6 h-5 w-5 drop-shadow" />
+                </button>
+              </>
+            )}
+          </Dialog.Panel>
         </div>
       </Dialog>
     </Transition.Root>

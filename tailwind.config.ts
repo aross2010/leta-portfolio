@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       leta: ['Montserrat', 'sans-serif'],
+      jost: ['var(--font-jost)', 'sans-serif'],
     },
     extend: {
       screens: {
@@ -17,6 +18,10 @@ const config: Config = {
         md: '850px',
         sm: '700px',
         xs: '400px',
+      },
+
+      colors: {
+        primary: '#b8a5a5',
       },
     },
   },

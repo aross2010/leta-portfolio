@@ -3,49 +3,55 @@ import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import NavLink from './ui/nav-link'
-import { projectsData } from '../lib/data'
+import { projectsData, experiencesData } from '../lib/data'
 import Image from 'next/image'
-import logoSm from '@/public/logo-small.png'
-
+import logoSm from '@/public/LP_Logo.png'
+// import logoSm from '@/public/logo-small.png'
 const navOptions = [
   {
-    name: 'Projects',
+    name: 'projects',
     href: '/#projects',
   },
   {
-    name: 'About Me',
+    name: 'experiences',
+    href: '/#experiences',
+  },
+  {
+    name: 'about me',
     href: '/#about',
   },
 ]
 
 export default function Navbar() {
   const [isProjectsOpen, setIsProjectsOpen] = useState(false)
+  const [isExperiencesOpen, setIsExperiencesOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const experiencesRef = useRef<HTMLDivElement>(null)
   const navRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleMouseExit = (event: MouseEvent) => {
       if (
-        ref.current &&
         navRef.current &&
-        !ref.current.contains(event.target as Node) &&
-        !navRef.current.contains(event.target as Node)
+        !navRef.current.contains(event.target as Node) &&
+        !ref.current?.contains(event.target as Node) &&
+        !experiencesRef.current?.contains(event.target as Node)
       ) {
         setIsProjectsOpen(false)
+        setIsExperiencesOpen(false)
       }
     }
 
     const handleMouseClick = (event: MouseEvent) => {
       if (
-        ref.current &&
         navRef.current &&
-        !ref.current.contains(event.target as Node) &&
-        !navRef.current.contains(event.target as Node)
+        !navRef.current.contains(event.target as Node) &&
+        !ref.current?.contains(event.target as Node) &&
+        !experiencesRef.current?.contains(event.target as Node)
       ) {
-        // Clicked outside the dropdown or the trigger element
-
         event.preventDefault()
         setIsProjectsOpen(false)
+        setIsExperiencesOpen(false)
       }
     }
 
@@ -61,33 +67,48 @@ export default function Navbar() {
   const projectsDropdown = (
     <motion.div
       ref={ref}
-      initial={{
-        height: 0,
-      }}
-      animate={{
-        height: 'auto',
-      }}
-      transition={{
-        duration: 0.4,
-      }}
-      className="border-b absolute top-0 mt-[43px] shadow-md border-l border-r overflow-hidden rounded-b-md flex flex-col"
+      initial={{ height: 0 }}
+      animate={{ height: 'auto' }}
+      transition={{ duration: 0.4 }}
+      className="border-b absolute top-0 mt-[45px] max-h-[200px] overflow-y-scroll shadow-md border-l border-r overflow-hidden rounded-b-md flex flex-col"
     >
-      {projectsData.map((project, index) => {
-        return (
-          <Link
-            href={`/project/${project.path}`}
-            key={index}
-            onClick={() => setIsProjectsOpen(false)}
-            className={`${
-              index !== projectsData.length - 1
-                ? 'border-b border-gray-200'
-                : ''
-            } px-3 py-3 text-xs uppercase tracking-wider bg-gray-100 hover:bg-gray-300 transition-colors`}
-          >
-            {project.title}
-          </Link>
-        )
-      })}
+      {projectsData.map((project, index) => (
+        <Link
+          href={`/project/${project.path}`}
+          key={index}
+          onClick={() => setIsProjectsOpen(false)}
+          className={`${
+            index !== projectsData.length - 1 ? 'border-b border-gray-200' : ''
+          } px-3 py-3 text-xs tracking-wider bg-gray-100 hover:bg-gray-300 transition-colors whitespace-nowrap`}
+        >
+          {project.title}
+        </Link>
+      ))}
+    </motion.div>
+  )
+
+  const experiencesDropdown = (
+    <motion.div
+      ref={experiencesRef}
+      initial={{ height: 0 }}
+      animate={{ height: 'auto' }}
+      transition={{ duration: 0.4 }}
+      className="border-b absolute top-0 mt-[45px] max-h-[200px] overflow-y-hidden shadow-md border-l border-r overflow-hidden rounded-b-md flex flex-col"
+    >
+      {experiencesData.map((experience, index) => (
+        <Link
+          href={`/experiences/${experience.path}`}
+          key={index}
+          onClick={() => setIsExperiencesOpen(false)}
+          className={`${
+            index !== experiencesData.length - 1
+              ? 'border-b border-gray-200'
+              : ''
+          } px-3 py-3 text-xs tracking-wider bg-gray-100 hover:bg-gray-300 transition-colors whitespace-nowrap`}
+        >
+          {experience.title}
+        </Link>
+      ))}
     </motion.div>
   )
 
@@ -106,28 +127,39 @@ export default function Navbar() {
               width={45}
               height={45}
               quality={100}
-              className="absolute transform -translate-y-1/2 "
+              className="absolute transform -translate-y-1/2 h-full w-auto"
             />
           </Link>
         </div>
-        <div className="flex items-center md:gap-6 gap-4 relative">
-          {isProjectsOpen && projectsDropdown}
-          {navOptions.map((navOption, index) => {
-            return (
+        <div className="flex items-center md:gap-6 sm:gap-4 xs:gap-3 gap-2">
+          {navOptions.map((navOption, index) => (
+            <div
+              key={index}
+              className="relative"
+            >
               <NavLink
-                key={index}
                 href={navOption.href}
                 name={navOption.name}
                 setIsProjectsOpen={setIsProjectsOpen}
+                setIsExperiencesOpen={setIsExperiencesOpen}
               />
-            )
-          })}
-          <NavLink
-            href="/Leta_Pham_Resume.pdf"
-            external
-            name="Resume"
-            setIsProjectsOpen={setIsProjectsOpen}
-          />
+              {navOption.name === 'projects' &&
+                isProjectsOpen &&
+                projectsDropdown}
+              {navOption.name === 'experiences' &&
+                isExperiencesOpen &&
+                experiencesDropdown}
+            </div>
+          ))}
+          <div className="relative">
+            <NavLink
+              href="/Leta_Pham_Resume.pdf"
+              external
+              name="resume"
+              setIsProjectsOpen={setIsProjectsOpen}
+              setIsExperiencesOpen={setIsExperiencesOpen}
+            />
+          </div>
         </div>
       </nav>
     </header>

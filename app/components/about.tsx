@@ -22,9 +22,9 @@ export default function About() {
         transition={{
           duration: 1,
         }}
-        className="uppercase tracking-wider font-medium md:text-3xl text-2xl pb-2"
+        className="tracking-wider text-gray-700 font-bold md:text-3xl text-2xl pb-2"
       >
-        About Me
+        about me
       </motion.h2>
       <motion.div
         initial={{ width: '0%' }}
@@ -40,9 +40,6 @@ export default function About() {
       />
 
       <div className="my-8 flex xl:flex-row flex-col items-start relative">
-        {/* <h1 className="uppercase tracking-wider font-medium text-lg mb-6">
-          Trust is the process
-        </h1> */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -56,31 +53,26 @@ export default function About() {
           className="xl:w-1/2 w-full xl:pr-10"
         >
           <p className="text-gray-700 mb-8">
-            My name is Leta Pham and I am currently a BFA Interior Design
-            Student at SJSU. Currently, I am a 2nd year Interior Design student
-            at San Jose State University. I am involved in the Interior Design
-            Student Organization (IDSO) as the Freshman Liaison. I am also a
-            part of the American Society of Interior Designers (ASID) as a
-            student member.
+            With a desire to integrate practical expertise, interpersonal
+            skills, and creative expression, I found my passion in Interior
+            Design. My academic journey began at West Valley College in 2020,
+            where I built a foundation in design principles before transferring
+            to San José State University in Spring 2023. I graduate in May 2026
+            with a Bachelor of Fine Arts in Interior Design.
             <br />
-            <br /> I am a designer who loves to create spaces that are{' '}
-            <span className="font-semibold">functional</span>,{' '}
-            <span className="font-semibold">beautiful</span>, and focus heavily
-            on the <span className="font-semibold">user-experience</span>. When
-            designing my projects, I love to experiment with different styles,
-            materials, and color. I choose colors and material with fine
-            attention to detail and intention, and try to imagine myself as a
-            user in the space. In my studies at SJSU, I practice designing
-            commercial spaces, and would love to pursue a career in retail or
-            hospitality design.
             <br />
-            <br /> When I am not designing, I love watching movies, reading,
-            traveling, collecting, working out, and hanging out with my
-            boyfriends dog. Wherever I am, whether it is at the movie theater or
-            seeing a new part of the world, I am always studying my environment
-            and seeing how my experiences can help impact my designs.
+            Throughout my studies, I developed a strong interest in storytelling
+            through design, exploring materiality, color, and form while
+            considering user experience and community context.
             <br />
-            <br /> I am currently looking for an internship for Summer 2024.
+            <br />
+            A year-long internship at Gensler’s San Jose office strengthened my
+            skills in material palettes, conceptual diagrams, spatial planning,
+            and high-quality renderings.
+            <br />
+            <br />
+            In my free time, I love doing karaoke, going to museums, watching
+            any type of movie or tv show, and traveling the world.
           </p>
           <motion.div
             initial={{ width: '0%' }}
@@ -110,9 +102,7 @@ export default function About() {
             }}
             className="mt-4 xl:block hidden"
           >
-            <h4 className="font-medium uppercase tracking-wider text-lg mb-2">
-              Skills
-            </h4>
+            <h4 className="font-medium tracking-wider text-lg mb-2">skills</h4>
 
             <ul className="flex flex-wrap gap-3 mb-8">
               {aboutData.skills.map((skill, index) => {
@@ -177,8 +167,8 @@ export default function About() {
               stiffness: 50,
             }}
           >
-            <h4 className="font-medium uppercase tracking-wider text-lg my-4">
-              Education
+            <h4 className="font-medium tracking-wider text-lg my-4">
+              education
             </h4>
             {aboutData.education.map((education, index) => {
               return (
@@ -228,8 +218,8 @@ export default function About() {
               stiffness: 50,
             }}
           >
-            <h4 className="font-medium uppercase tracking-wider text-lg mb-4">
-              Experience
+            <h4 className="font-medium tracking-wider text-lg mb-4">
+              experience
             </h4>
             {aboutData.experience.map((experience, index) => {
               return (
@@ -282,8 +272,8 @@ export default function About() {
               stiffness: 50,
             }}
           >
-            <h4 className="font-medium uppercase tracking-wider text-lg mb-4">
-              Associations
+            <h4 className="font-medium tracking-wider text-lg mb-4">
+              associations
             </h4>
             {aboutData.associations.map((association, index) => {
               return (
@@ -337,9 +327,9 @@ export default function About() {
                 type: 'spring',
                 stiffness: 50,
               }}
-              className="font-medium uppercase tracking-wider text-lg mb-2"
+              className="font-medium tracking-wider text-lg mb-2"
             >
-              Skills
+              skills
             </motion.h4>
 
             <ul className="flex flex-wrap gap-3 mb-8">

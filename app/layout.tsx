@@ -1,10 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Jost } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
+const jost = Jost({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-jost',
+})
 
 export const metadata: Metadata = {
   title: 'Leta Pham Portfolio',
@@ -23,7 +28,7 @@ export default function RootLayout({
       className="!scroll-smooth"
     >
       <body
-        className={`${inter.className} font-leta bg-gray-50 text-gray-950 tracking-wide max-w-[100vw] overflow-x-clip`}
+        className={`${inter.className} ${jost.className} bg-gray-50 text-gray-950 tracking-wide max-w-[100vw] overflow-x-hidden flex flex-col min-h-screen`}
       >
         <Navbar />
         <main className="flex flex-col items-center gap-36 px-4 justify-center py-12">
