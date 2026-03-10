@@ -175,6 +175,7 @@ export default function HomeDisplay({
             </motion.h2>
             <Image
               priority={true}
+              placeholder="blur"
               src={thumbnail}
               alt={title}
               className=" xl:w-[750px] md:w-[625px] aspect-video w-full object-center md:rounded-lg rounded-md shadow-lg object-cover xl:group-hover:scale-105 transition-all duration-300 ease-in-out -z-10"

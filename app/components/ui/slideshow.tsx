@@ -63,7 +63,8 @@ export default function Slideshow({
             ) : (
               <>
                 <Image
-                  priority={true}
+                  priority={index === 0}
+                  placeholder="blur"
                   src={data.image!}
                   alt="Project Image"
                   fill
