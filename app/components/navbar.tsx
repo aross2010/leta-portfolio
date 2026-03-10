@@ -49,7 +49,6 @@ export default function Navbar() {
         !ref.current?.contains(event.target as Node) &&
         !experiencesRef.current?.contains(event.target as Node)
       ) {
-        event.preventDefault()
         setIsProjectsOpen(false)
         setIsExperiencesOpen(false)
       }
