@@ -169,26 +169,21 @@ import honorsAward2025 from '@/public/HonorAwards_2025.png'
 import honorsAward2026 from '@/public/HonorAwards_2026.png'
 
 import gensler1 from '@/public/about/gensler/1_ILoveGensler.jpg'
-import gensler2 from '@/public/about/gensler/2_ArtGensler.jpg'
-import gensler3 from '@/public/about/gensler/3_BonusDay.jpg'
-import gensler4 from '@/public/about/gensler/4_GenslerHouston.jpg'
-import gensler5 from '@/public/about/gensler/5_Halloween_G1.jpg'
+import gensler2 from '@/public/about/gensler/2_Gensler_Sketches.jpg'
+import gensler3 from '@/public/about/gensler/3_InternPresentation.jpg'
+import gensler4 from '@/public/about/gensler/4_Working.jpg'
+import gensler5 from '@/public/about/gensler/5_BonusDay.jpg'
 import gensler6 from '@/public/about/gensler/6_GenslerGroupPic.jpg'
-import gensler7 from '@/public/about/gensler/7_OysterDay.jpg'
-import gensler8 from '@/public/about/gensler/8_InternBuddies.jpg'
-import gensler9 from '@/public/about/gensler/9_FunHats.jpg'
-import gensler10 from '@/public/about/gensler/10_GenslerOakland.jpg'
-import gensler11 from '@/public/about/gensler/11_HolidayParty2.jpg'
-import gensler12 from '@/public/about/gensler/12_Gensler.jpg'
-import gensler13 from '@/public/about/gensler/13_Halloween_G2.jpg'
-import genslerDC from '@/public/about/gensler/GenslerDC.jpg'
-import gensler14 from '@/public/about/gensler/InternPresentation.jpg'
-import gensler15 from '@/public/about/gensler/Materials.jpg'
-import gensler16 from '@/public/about/gensler/Palette1.jpg'
-import gensler17 from '@/public/about/gensler/Palette2.jpg'
-import gensler18 from '@/public/about/gensler/Working.jpg'
-import gensler02 from '@/public/about/gensler/2_Gensler_Sketches.jpg'
-import gensler002 from '@/public/about/gensler/2_after.jpg'
+import gensler7 from '@/public/about/gensler/6_Halloween_G1.jpg'
+import gensler8 from '@/public/about/gensler/7_ArtGensler.jpg'
+import gensler9 from '@/public/about/gensler/8_Palette1.jpg'
+import gensler10 from '@/public/about/gensler/9_OysterDay.jpg'
+import gensler11 from '@/public/about/gensler/10_FunHats.jpg'
+import gensler12 from '@/public/about/gensler/11_GenslerOakland.jpg'
+import gensler13 from '@/public/about/gensler/12_HolidayParty2.jpg'
+import gensler14 from '@/public/about/gensler/13_GenslerDC.jpg'
+import gensler15 from '@/public/about/gensler/14_Materials.jpg'
+import gensler18 from '@/public/about/gensler/17_Palette2.jpg'
 
 import iida1 from '@/public/about/iida/1_SummerRetreat.jpg'
 import iida2 from '@/public/about/iida/2_DesignExpo.jpg'
@@ -214,6 +209,7 @@ import travel12 from '@/public/about/travel/12_Taiwan.jpeg'
 import travelBiking from '@/public/about/travel/Biking.jpg'
 import travelLuberty from '@/public/about/travel/Luberty.jpeg'
 import travelVancouver from '@/public/about/travel/Vancouvaahh.jpg'
+import travel13 from '@/public/about/travel/13_GenslerHouston.jpg'
 
 import { ExperiencesData, ProjectData } from './types'
 import Link from 'next/link'
@@ -974,8 +970,6 @@ export const experiencesData = [
       "In June 2025, I started my internship at Gensler's San Jose office. Being that this was my first internship at an A&D firm, it opened my eyes to what my future would look like.\n\nDuring my internship, I have gained experience in designing test fits, creating renders in Photoshop, modeling in Revit, creating mood boards and material palettes, and also coordinating and ordering samples from local sales representatives.\n\nAt Gensler, I have also become immersed in the work life culture by attending several group outings, happy hours, and annual work parties.",
     slideshow: [
       { image: gensler1 },
-      { image: gensler02 },
-      { image: gensler14 },
       { image: gensler2 },
       { image: gensler3 },
       { image: gensler4 },
@@ -988,10 +982,8 @@ export const experiencesData = [
       { image: gensler11 },
       { image: gensler12 },
       { image: gensler13 },
-      { image: genslerDC },
+      { image: gensler14 },
       { image: gensler15 },
-      { image: gensler16 },
-      { image: gensler17 },
       { image: gensler18 },
     ],
     thumbnailImage: gensler1,
@@ -1071,6 +1063,7 @@ export const experiencesData = [
       { image: travelBiking },
       { image: travelLuberty },
       { image: travelVancouver },
+      { image: travel13 },
     ],
     thumbnailImage: travel1,
     videos: [
