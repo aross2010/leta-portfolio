@@ -146,7 +146,7 @@ export default function About() {
                 return (
                   <motion.li
                     key={index}
-                    className="py-1 md:text-2xl text-xl rounded-lg"
+                    className="py-1 md:text-2xl text-xl rounded-lg text-gray-700"
                     initial={{ opacity: 0, y: -100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{
@@ -424,7 +424,7 @@ export default function About() {
                 return (
                   <motion.li
                     key={index}
-                    className="py-1 md:text-2xl text-xl rounded-lg"
+                    className="py-1 md:text-2xl text-xl rounded-lg text-gray-700"
                     initial={{ opacity: 0, y: -100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{
