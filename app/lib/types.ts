@@ -19,7 +19,7 @@ export type ProjectData = {
     value: string
   }[]
   color: string
-  brief: string
+  brief: string | React.ReactNode
   slideshow: Slideshow
   additionalSections?: {
     title: string

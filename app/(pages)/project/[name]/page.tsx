@@ -60,7 +60,6 @@ export default function Project({
         return (
           <motion.li
             key={index}
-            className="flex gap-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -68,10 +67,8 @@ export default function Project({
               duration: 1,
             }}
           >
-            <h4 className="font-semibold">
-              {header.title}:{'  '}
-            </h4>
-            <p>{header.value}</p>
+            <h4 className="font-semibold inline">{header.title}: </h4>
+            <p className="inline">{header.value}</p>
           </motion.li>
         )
       })}
@@ -106,8 +103,8 @@ export default function Project({
             ))}
           </AnimatePresence>
         </h1>
-        <div className="flex mb-24 lg:flex-row flex-col items-center mt-4">
-          <div className="lg:w-1/2 w-full flex flex-col lg:gap-4 gap-6">
+        <div className="flex mb-24 lg:flex-row lg:gap-2 flex-col items-center">
+          <div className="lg:w-1/2 w-full flex flex-col lg:gap-4 gap-6 mt-4">
             <div className="flex flex-col gap-2 text-sm">
               {projectHeaders}
               {projectIcons}

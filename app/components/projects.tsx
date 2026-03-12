@@ -59,7 +59,7 @@ export default function Projects() {
             duration: 1,
             delay: 1.5,
           }}
-          className="md:text-xl text-lg text-gray-700 italic"
+          className="md:text-lg  text-gray-700 italic"
         >
           2023 — {new Date().getFullYear()}
         </motion.h4>

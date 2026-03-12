@@ -84,6 +84,43 @@ export default function About() {
               duration: 1.5,
               delay: 0.5,
             }}
+            className="border-t-[0.5px] border-gray-300 xl:block hidden"
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="mt-4 xl:block hidden"
+          >
+            <h4 className="font-medium tracking-wider text-lg mb-4">awards</h4>
+            {aboutData.awards.map((award, index) => (
+              <motion.div
+                key={index}
+                className="mb-4"
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: 0.15 * index,
+                  duration: 0.6,
+                  type: 'spring',
+                  stiffness: 60,
+                }}
+              >
+                <h5 className="flex sm:flex-row flex-col gap-1 sm:gap-2">
+                  <span className="font-medium">{award.title}</span>
+                  <span className="text-gray-600">{award.competition}</span>
+                </h5>
+                <span className="text-gray-600 text-sm">{award.date}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            initial={{ width: '0%' }}
+            whileInView={{ width: '100%' }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay: 0.5 }}
             className="border-t-[0.5px] border-gray-300"
           />
           <motion.div
@@ -327,7 +364,57 @@ export default function About() {
                 type: 'spring',
                 stiffness: 50,
               }}
-              className="font-medium tracking-wider text-lg mb-2"
+              className="font-medium tracking-wider text-lg mb-4"
+            >
+              awards
+            </motion.h4>
+            {aboutData.awards.map((award, index) => (
+              <motion.div
+                key={index}
+                className="mb-4"
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: 1 + 0.15 * index,
+                  duration: 0.6,
+                  type: 'spring',
+                  stiffness: 60,
+                }}
+              >
+                <h5 className="flex sm:flex-row flex-col gap-1 sm:gap-2">
+                  <span className="font-medium">{award.title}</span>
+                  <span className="text-gray-600">{award.competition}</span>
+                </h5>
+                <span className="text-gray-600 text-sm">{award.date}</span>
+              </motion.div>
+            ))}
+            <motion.div
+              initial={{ width: '0', marginLeft: 'auto' }}
+              whileInView={{ width: '100%' }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.75, delay: 0.5 }}
+              className="border-t-[0.5px] border-gray-300"
+            />
+            <motion.h4
+              initial={{
+                opacity: 0,
+                x: -100,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 1,
+                delay: 0.5,
+                type: 'spring',
+                stiffness: 50,
+              }}
+              className="font-medium tracking-wider text-lg mb-2 mt-4"
             >
               skills
             </motion.h4>

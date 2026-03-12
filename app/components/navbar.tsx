@@ -125,7 +125,6 @@ export default function Navbar() {
               alt="LP Designs"
               width={45}
               height={45}
-              quality={100}
               className="absolute transform -translate-y-1/2 h-full w-auto"
             />
           </Link>

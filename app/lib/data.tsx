@@ -143,6 +143,7 @@ import rootAndRadiance4 from '@/public/projects/RootAndRadiance/4_BEHR_Axon.png'
 import rootAndRadiance5 from '@/public/projects/RootAndRadiance/5_BEHR_Breakroom.png'
 import rootAndRadiance6 from '@/public/projects/RootAndRadiance/6_BEHR_QuietArea.png'
 
+import furniture01 from '@/public/projects/Furniture/01_Furniture.jpg'
 import furniture1 from '@/public/projects/Furniture/1_TimotheeStand1.jpg'
 import furniture2 from '@/public/projects/Furniture/2_TimotheeStand2.jpg'
 import furniture3 from '@/public/projects/Furniture/3_TimotheeStand3.jpg'
@@ -186,6 +187,8 @@ import gensler15 from '@/public/about/gensler/Materials.jpg'
 import gensler16 from '@/public/about/gensler/Palette1.jpg'
 import gensler17 from '@/public/about/gensler/Palette2.jpg'
 import gensler18 from '@/public/about/gensler/Working.jpg'
+import gensler02 from '@/public/about/gensler/2_Gensler_Sketches.jpg'
+import gensler002 from '@/public/about/gensler/2_after.jpg'
 
 import iida1 from '@/public/about/iida/1_SummerRetreat.jpg'
 import iida2 from '@/public/about/iida/2_DesignExpo.jpg'
@@ -197,6 +200,7 @@ import iidaDesignExpo2024 from '@/public/about/iida/DesignExpo2024.jpg'
 
 import travel1 from '@/public/about/travel/1_Singapore.jpg'
 import travel2 from '@/public/about/travel/2_MHE.jpeg'
+import travel02 from '@/public/about/travel/2_London.jpg'
 import travel3 from '@/public/about/travel/3_Taiwan_Writing.jpg'
 import travel4 from '@/public/about/travel/4_BrooklynBridge.jpg'
 import travel5 from '@/public/about/travel/5_DC.jpg'
@@ -212,6 +216,7 @@ import travelLuberty from '@/public/about/travel/Luberty.jpeg'
 import travelVancouver from '@/public/about/travel/Vancouvaahh.jpg'
 
 import { ExperiencesData, ProjectData } from './types'
+import Link from 'next/link'
 
 export const projectsData = [
   {
@@ -251,7 +256,7 @@ export const projectsData = [
       image: honorsAward2025,
     },
     brief:
-      'Status Change: "Out of Office" --> "Return to Office"\n\nThe project consists of a tenant improvement in a commercial setting. The scope is roughly 30,00 square feet and entails the re-design of an office space for Notion. Notion is a digital cloud-based workspace that allows users to organize, collaborate, note-take, and more. The designer was tasked with designing an office that inspires workers to come back into office after growing accustomed to remote work.\n\nThe design solution involves ties to Notions\'s branding and utilizing finishes that remind the users of the familiarity and comfort of home, while offering different design solutions that suit all kinds of users and their various needs for work.',
+      'Status Change: "Out of Office" --> "Return to Office"\n\nThe project consists of a tenant improvement in a commercial setting. The scope is roughly 30,000 square feet and entails the re-design of an office space for Notion. Notion is a digital cloud-based workspace that allows users to organize, collaborate, note-take, and more. The designer was tasked with designing an office that inspires workers to come back into office after growing accustomed to remote work.\n\nThe design solution involves ties to Notion\'s branding and utilizing finishes that remind the users of the familiarity and comfort of home, while offering different design solutions that suit all kinds of users and their various needs for work.',
     slideshow: [
       { image: notion1 },
       { image: notion2 },
@@ -264,7 +269,7 @@ export const projectsData = [
     ],
     additionalSections: [
       {
-        title: 'IIDA norCal honor awards 2025',
+        title: 'iida norcal honor awards 2025',
         brief:
           'On March 20, 2025, I had the honor of accepting First Place in the Student Category at the 2025 IIDA Honor Awards.\n\nReceiving an award for a project that I was truly passionate and proud of was such a fulfilling experience, and it taught me valuable lessons on storytelling and how to rework school projects to make them stronger.\n\nIt was also thrilling to be surrounded by my SJSU peers and future industry friends, and it changed my life forever. I am so grateful to IIDA Northern California for supporting students like me, and I will always remember that night!',
         slideshow: [
@@ -371,6 +376,10 @@ export const projectsData = [
         value: 'Clerkenwell, London, England',
       },
       {
+        title: 'Area',
+        value: '5,000 SF',
+      },
+      {
         title: 'Date',
         value: 'Fall 2025',
       },
@@ -446,7 +455,7 @@ export const projectsData = [
     path: 'root-and-radiance',
     title: 'root & radiance center',
     date: 'fall 2025',
-    projectFunction: 'nehr student design competition',
+    projectFunction: 'behr student design competition',
     icons: [
       React.createElement(SiAdobeillustrator),
       React.createElement(SiAdobephotoshop),
@@ -484,14 +493,43 @@ export const projectsData = [
       { image: rootAndRadiance5 },
       { image: rootAndRadiance6 },
     ],
-    brief:
-      "My project, Root & Radiance Center, is a youth development hub that is designed to support young individuals transition into adulthood. It aims to bridge the gap between youth and adulthood by utilizing BEHR's Color Trends of the Year that balance playfulness and sophistication.\n\nThroughout the space, shades of calming jade, warm terracotta, and soft neutrals create an atmosphere that feels grounding and vibrant to mirror the duality of youth. Spatial programming was designed with color in mind, with more quiet areas colored in Hidden Gem N430-6A and Watery HDC-CT-26, while areas designed for chatter and interaction, like the break room, energize the user with Beehive M270-5. Other neutrals are sprinkled throughout the space to ground the palette.\n\nThrough color, form, and atmosphere, the Root & Radiance Center becomes a refuge for growth, confidence, and self discovery.",
+    brief: (
+      <>
+        My project, Root & Radiance Center, is a youth development hub that is
+        designed to support young individuals transition into adulthood. It aims
+        to bridge the gap between youth and adulthood by utilizing BEHR’s Color
+        Trends of the Year that balance playfulness and sophistication. This
+        project was chosen as the First Prize Winner in the{' '}
+        <Link
+          className="font-bold underline"
+          href={
+            'https://www.behr.com/pro/colors/2025-student-design-competition'
+          }
+          target="_blank"
+        >
+          2025 BEHR Student Design Competition
+        </Link>
+        .<br />
+        <br />
+        Throughout the space, shades of calming jade, warm terracotta, and soft
+        neutrals create an atmosphere that feels grounding and vibrant to mirror
+        the duality of youth. Spatial programming was designed with color in
+        mind, with more quiet areas colored in Hidden Gem N430-6A and Watery
+        HDC-CT-26, while areas designed for chatter and interaction, like the
+        break room, energize the user with Beehive M270-5. Other neutrals are
+        sprinkled throughout the space to ground the palette.
+        <br />
+        <br />
+        Through color, form, and atmosphere, the Root & Radiance Center becomes
+        a refuge for growth, confidence, and self discovery.
+      </>
+    ),
   },
   {
     path: 'furniture',
     title: 'furniture',
     date: 'spring 2025',
-    projectFunction: 'misc.',
+    projectFunction: 'fabrication',
     icons: [
       React.createElement(SiAdobeillustrator),
       React.createElement(SiAdobephotoshop),
@@ -511,8 +549,9 @@ export const projectsData = [
       },
     ],
     color: '#d9963f',
-    thumbnailImage: furniture1,
+    thumbnailImage: furniture01,
     slideshow: [
+      { image: furniture01 },
       { image: furniture1 },
       { image: furniture2 },
       { image: furniture3 },
@@ -522,7 +561,7 @@ export const projectsData = [
       { image: furniture7 },
     ],
     brief:
-      'During this furniture class, I learned about how to build basic joints and how to conceptualize and actualize methods of fabrication.\n\nI played with different forms such as more rectilinear shapes, and also played around with curvilinear furniture and combined it with my love for fish.\n\nSee some of my projects below!',
+      'During this furniture class, I learned about how to build basic joints and how to conceptualize and actualize methods of fabrication.\n\nI played with different forms such as more rectilinear shapes, and also played around with curvilinear furniture and combined it with my love for fish.',
   },
   {
     path: 'fashion',
@@ -641,6 +680,10 @@ export const projectsData = [
         title: 'Area',
         value: '~ 1,800 SF',
       },
+      {
+        title: 'Class',
+        value: 'DSIT 33 | A. Yeung',
+      },
     ],
     slideshow: [
       { image: beauty1 },
@@ -692,6 +735,10 @@ export const projectsData = [
         title: 'Area',
         value: '~ 1,100 SF',
       },
+      {
+        title: 'Class',
+        value: 'DSIT 33 | A. Yeung',
+      },
     ],
     slideshow: [
       { image: restRender1 },
@@ -734,6 +781,10 @@ export const projectsData = [
       {
         title: 'Program',
         value: 'Pop-Up',
+      },
+      {
+        title: 'Class',
+        value: 'DSIT 83 | S. Wong',
       },
     ],
     slideshow: [
@@ -796,6 +847,10 @@ export const projectsData = [
         title: 'Area',
         value: '~ 2,300 SF',
       },
+      {
+        title: 'Class',
+        value: 'DSIT 34 | E. Pries',
+      },
     ],
     slideshow: [
       { image: workRender1 },
@@ -824,7 +879,7 @@ export const projectsData = [
 export const aboutData = {
   name: 'leta pham',
   titleShort: 'interior design',
-  titleLong: 'BFA interior design, SJSU',
+  titleLong: 'bfa interior design, sjsu',
   links: [
     {
       icon: FaInstagram,
@@ -855,43 +910,55 @@ export const aboutData = {
   profileImage: profilePic,
   education: [
     {
-      title: 'AA: Humanities',
-      location: 'West Valley College',
-      date: 'Jul. 2020 - Dec. 2022',
+      title: 'aa: humanities',
+      location: 'west valley college',
+      date: 'jul. 2020 - dec. 2022',
     },
     {
-      title: 'BFA Interior Design',
-      location: 'San Josè State University',
-      date: 'Jan. 2023 - May 2026',
+      title: 'bfa interior design',
+      location: 'san josè state university',
+      date: 'jan. 2023 - may 2026',
     },
   ],
   experience: [
     {
-      title: 'Director of Student Affairs',
-      location: 'IIDA NorCal Chapter',
-      date: 'Jun. 2025 - Jun. 2026',
+      title: 'director of student affairs',
+      location: 'iida norcal chapter',
+      date: 'jun. 2025 - jun. 2026',
     },
     {
-      title: 'Interior Design Intern',
-      location: 'Gensler',
-      date: 'Jun. 2025 - Jun. 2026',
+      title: 'interior design intern',
+      location: 'gensler',
+      date: 'jun. 2025 - jun. 2026',
     },
   ],
   associations: [
     {
-      title: 'West Valley College Interior Design Club',
-      role: 'Communications Chair',
-      date: 'Jan. 2021 - Dec. 2022',
+      title: 'west valley college interior design club',
+      role: 'communications chair',
+      date: 'jan. 2021 - dec. 2022',
     },
     {
-      title: 'IIDA NorCal Chapter',
-      role: 'Student Member',
-      date: 'Jan. 2023 - Dec. 2026',
+      title: 'iida norcal chapter',
+      role: 'student member',
+      date: 'jan. 2023 - dec. 2026',
     },
     {
-      title: 'SJSU Interior Design Student Organization',
-      role: 'Public Relations Chair',
-      date: 'Jun. 2025 - Jun. 2026',
+      title: 'sjsu interior design student organization',
+      role: 'public relations chair',
+      date: 'jun. 2025 - jun. 2026',
+    },
+  ],
+  awards: [
+    {
+      date: 'mar. 2025',
+      title: 'first place student winner',
+      competition: 'iida norcal honor awards',
+    },
+    {
+      date: 'dec. 2025',
+      title: 'first prize student winner',
+      competition: 'behr student design competition',
     },
   ],
 }
@@ -907,6 +974,8 @@ export const experiencesData = [
       "In June 2025, I started my internship at Gensler's San Jose office. Being that this was my first internship at an A&D firm, it opened my eyes to what my future would look like.\n\nDuring my internship, I have gained experience in designing test fits, creating renders in Photoshop, modeling in Revit, creating mood boards and material palettes, and also coordinating and ordering samples from local sales representatives.\n\nAt Gensler, I have also become immersed in the work life culture by attending several group outings, happy hours, and annual work parties.",
     slideshow: [
       { image: gensler1 },
+      { image: gensler02 },
+      { image: gensler14 },
       { image: gensler2 },
       { image: gensler3 },
       { image: gensler4 },
@@ -920,7 +989,6 @@ export const experiencesData = [
       { image: gensler12 },
       { image: gensler13 },
       { image: genslerDC },
-      { image: gensler14 },
       { image: gensler15 },
       { image: gensler16 },
       { image: gensler17 },
@@ -930,12 +998,12 @@ export const experiencesData = [
   },
   {
     path: 'iida-norcal',
-    title: 'iida norCal',
+    title: 'iida norcal',
     experienceFunction: 'volunteer',
     date: 'jun. 2025 - present',
     color: '#6bbdc2',
     brief:
-      "Throughout my time at SJSU, I have been involved in my local chapter of IIDA as a Student IIDA. I have attended countless Design Expos, Portfolio Reviews, and Advocacy events to strengthen my professional skills and increase my knowledge on the profession of interior design.\n\nAfter winning First Place in the IIDA NorCal Honor Awards in March, I saw firsthand how being involved in IIDA can lead to greater opportunities and kickstart a career.\n\nSo in June of 2025, I joined IIDA Northern California's board as the Director of Student Affairs, where I serve as the Student Voice for the chapter. I have helped plan events, spoke on a panel, and organized volunteers for our annual Honor Awards show. This opportunity has given me the opportunity to meet some of the most inspiring leaders in our industry, and inspired me to represent my community in any way that I can.",
+      "Throughout my time at SJSU, I have been involved in my local chapter of IIDA as a Student IIDA member. I have attended countless design expos, portfolio reviews, and advocacy events to strengthen my professional skills and increase my knowledge on the profession of interior design.\n\nAfter winning First Place in the IIDA NorCal Honor Awards in March, I saw firsthand how being involved in IIDA can lead to greater opportunities and kickstart a career.\n\nSo in June of 2025, I joined IIDA Northern California's board as the Director of Student Affairs, where I serve as the Student Voice for the chapter. I have helped plan events, spoke on a panel, and organized volunteers for our annual Honor Awards show. This opportunity has given me the chance to meet some of the most inspiring leaders in our industry, and inspired me to represent my community in any way that I can.",
     slideshow: [
       { image: iida1 },
       { image: iida2 },
@@ -957,6 +1025,7 @@ export const experiencesData = [
       'As a curious soul, I have always been drawn to new places that have rich history and culture. Throughout my life, I have been lucky enough to travel to many different places such as New York, England, Taiwan, and more!\n\nI document my passion for travel in my YouTube videos and even some short reels on my Instagram.\n\nMy love for travel has allowed me to absorb the design of different cultures, and impacted the way I approach my design thinking. It also made me realize that a big driver for my design approach is my interest in research of local communities. Every time I visit a city, I fall in love with the way the local people shape the fabric of the community and culture, and it is a principle that I will take with me in my career.',
     slideshow: [
       { image: travel1 },
+      { image: travel02 },
       { image: travel2 },
       { image: travel3 },
       { image: travel4 },

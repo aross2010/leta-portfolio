@@ -39,7 +39,7 @@ export default function Slideshow({
   }
 
   const carousel = (
-    <div className="relative rounded-lg shadow-xl overflow-hidden bg-gray-950">
+    <div className="relative rounded-lg shadow-xl overflow-hidden bg-gray-950 aspect-video">
       <Carousel
         infinite
         responsive={responsive}
