@@ -45,7 +45,7 @@ export type ExperiencesData = {
   color: string
   date: string
   thumbnailImage: StaticImageData
-  brief: string
+  brief: string | React.ReactNode
   slideshow: Slideshow
   videos?: {
     url: string

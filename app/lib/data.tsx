@@ -1021,8 +1021,39 @@ export const experiencesData = [
     experienceFunction: 'life experience',
     date: '2002 - present',
     color: '#cc7881',
-    brief:
-      'As a curious soul, I have always been drawn to new places that have rich history and culture. Throughout my life, I have been lucky enough to travel to many different places such as New York, England, Taiwan, and more!\n\nI document my passion for travel in my YouTube videos and even some short reels on my Instagram.\n\nMy love for travel has allowed me to absorb the design of different cultures, and impacted the way I approach my design thinking. It also made me realize that a big driver for my design approach is my interest in research of local communities. Every time I visit a city, I fall in love with the way the local people shape the fabric of the community and culture, and it is a principle that I will take with me in my career.',
+    brief: (
+      <>
+        As a curious soul, I have always been drawn to new places that have rich
+        history and culture. Throughout my life, I have been lucky enough to
+        travel to many different places such as New York, England, Taiwan, and
+        more!
+        <br />
+        <br />I document my passion for travel on my{' '}
+        <Link
+          className="font-bold underline"
+          href={'https://www.youtube.com/@letapham'}
+          target="_blank"
+        >
+          YouTube
+        </Link>{' '}
+        channel and even some short reels on my{' '}
+        <Link
+          className="font-bold underline"
+          href={'https://www.instagram.com/withloveleta/'}
+          target="_blank"
+        >
+          Instagram
+        </Link>
+        .<br />
+        <br />
+        My love for travel has allowed me to absorb the design of different
+        cultures, and impacted the way I approach my design thinking. It also
+        made me realize that a big driver for my design approach is my interest
+        in research of local communities. Every time I visit a city, I fall in
+        love with the way the local people shape the fabric of the community and
+        culture, and it is a principle that I will take with me in my career.
+      </>
+    ),
     slideshow: [
       { image: travel1 },
       { image: travel02 },
