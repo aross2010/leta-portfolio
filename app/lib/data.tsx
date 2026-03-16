@@ -956,6 +956,11 @@ export const aboutData = {
       title: 'first prize student winner',
       competition: 'behr student design competition',
     },
+    {
+      date: 'mar. 2026',
+      title: 'second place student winner',
+      competition: 'iida norcal honor awards',
+    },
   ],
 }
 
@@ -1000,7 +1005,7 @@ export const experiencesData = [
       { image: iida1 },
       { image: iida2 },
       { image: iida3 },
-      { image: iida4 },
+      { image: honorAwards3 },
       { image: iida5 },
       { image: iidaGoodies },
       { image: iidaDesignExpo2024 },
