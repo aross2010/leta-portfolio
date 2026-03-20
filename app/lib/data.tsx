@@ -347,6 +347,12 @@ export const projectsData = [
           { image: flushing10 },
         ],
       },
+      {
+        title: 'iida norcal honor awards 2026',
+        brief:
+          'On March 12, 2025, I had the honor of accepting Second Place in the Student Category at the 2026 IIDA Honor Awards.\n\nBeing able to share my project on stage and speak to an audience of people I deeply respect one last time as a student meant more to me than any monetary reward. Being embraced by the industry and supported by my classmates was incredibly rewarding and fulfilling. It is an experience I will carry with me forever. No matter where my career takes me, I will always remember that moment—standing there, feeling as though my entire future was just beginning to unfold before me.',
+        slideshow: [{ youtubeUrl: 'https://youtu.be/7oN6XY03NHc' }],
+      },
     ],
   },
   {
@@ -397,7 +403,7 @@ export const projectsData = [
       { image: goldenLane6 },
       { image: goldenLane7 },
       { image: goldenLane8 },
-      { image: goldenLane9 },
+      // { image: goldenLane9 },
       { image: goldenLane10 },
       { image: goldenLane11 },
     ],

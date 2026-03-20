@@ -42,6 +42,7 @@ export default function Slideshow({
     <div className="relative rounded-lg shadow-xl overflow-hidden bg-gray-950 aspect-video">
       <Carousel
         infinite
+        arrows={slideshow.length > 1}
         responsive={responsive}
         showDots={showFullscreen}
         removeArrowOnDeviceType={['mobile']}
@@ -64,7 +65,7 @@ export default function Slideshow({
               <>
                 <Image
                   priority={index === 0}
-                  placeholder="blur"
+                  // placeholder="blur"
                   src={data.image!}
                   alt="Project Image"
                   fill
