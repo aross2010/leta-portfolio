@@ -314,7 +314,7 @@ export const projectsData = [
     color: '#85221e',
     thumbnailImage: crossroads1,
     brief:
-      "Concrete jungle where dreams are made of!\n\nThis project consists of a tenant improvement in a gallery + community setting. The scope of the project is over 30,000 square feet and is located in Flushing, Queens, a neighborhood in New York City.\n\nThe designer was tasked with designing a community center that inspires people to come together and enrich the urban environment. The designer was also tasked with finding a local artist and creating the branding for the artist gallery exhibit.\n\nThe concept and design approach of this project involved a mixture of research of the location and the artist's philosophy.",
+      "Concrete jungle where dreams are made of!\n\nThis project consists of a tenant improvement in a gallery + community setting. The scope of the project is over 30,000 square feet and is located in Flushing, Queens, a neighborhood in New York City.\n\nThe designer was tasked with designing a community center that inspires people to come together and enrich the urban environment. The designer was also tasked with finding a local artist and then creating the branding and spatial planning for the artist gallery exhibit.\n\nThe concept and design approach of this project involved a mixture of research of the location and the artist's philosophy. Many of the design choices were inspired by the culture and people of Flushing, and how the past and present blend into the modern fabric of the landscape.",
     slideshow: [
       { image: crossroads1 },
       { image: crossroads2 },
@@ -392,7 +392,7 @@ export const projectsData = [
     ],
     color: '#660b0b',
     brief:
-      "Grab a cuppa and sit back!\n\nThis project consists of a movie theater lounge and tile showroom. The scope of the project is roughly 5,000 square feet and is located in Clerkenwell, a neighborhood in London.\n\nThe designer was tasked with utilizing the shell of the building, and giving new purpose to the space.\n\nThe concept and design approach of this project involved a mixture of research of the location and the artist's philosophy. The purpose was to give the busy workers, elderly, adults, and youth a space to relax and learn about film in a new way.",
+      'Grab a cuppa and sit back!\n\nThis project consists of a movie theater lounge and tile showroom. The scope of the project is roughly 5,000 square feet and is located in Clerkenwell, a neighborhood in London.\n\nThe designer was tasked with utilizing the shell of the building, and giving new purpose to the space. The program chosen is a casual movie lounge, where people can watch movies, chat, read, and learn about film in an interactive way. Rather than watch movies in silence and then leave like a traditional theater, people are encouraged to chat and talk about the films in a civil way that creates unity and connection. The spatial planning plays with clockwork and curves inspired by the industrial roots of Clerkenwell.\n\nThe concept and design approach of this project involved a mixture of research of the local culture and the impact of film on community. The purpose was to give the busy workers, elderly, adults, and youth a space to relax and learn about film in a new way.',
     thumbnailImage: goldenLane1,
     slideshow: [
       { image: goldenLane1 },
@@ -403,7 +403,7 @@ export const projectsData = [
       { image: goldenLane6 },
       { image: goldenLane7 },
       { image: goldenLane8 },
-      // { image: goldenLane9 },
+      { image: goldenLane9 },
       { image: goldenLane10 },
       { image: goldenLane11 },
     ],
@@ -978,7 +978,7 @@ export const experiencesData = [
     date: 'jun. 2025 - present',
     color: '#EE3224',
     brief:
-      "In June 2025, I started my internship at Gensler's San Jose office. Being that this was my first internship at an A&D firm, it opened my eyes to what my future would look like.\n\nDuring my internship, I have gained experience in designing test fits, creating renders in Photoshop, modeling in Revit, creating mood boards and material palettes, and also coordinating and ordering samples from local sales representatives.\n\nAt Gensler, I have also become immersed in the work life culture by attending several group outings, happy hours, and annual work parties.",
+      "In June 2025, I started my internship at Gensler's San Jose office. Being that this was my first internship at an A&D firm, it opened my eyes to what my future would look like.\n\nDuring my internship, I have gained experience in designing test fits, creating renders in Photoshop, modeling in Revit, creating mood boards and material palettes, approving samples, and also coordinating and ordering samples from local sales representatives. Additionally, I not only worked on local projects, but worked on a larger scale with other Gensler offices nationwide and even internationally.\n\nAt Gensler, I have also become immersed in the work life culture by attending several group outings, happy hours, and annual work parties.",
     slideshow: [
       { image: gensler1 },
       { image: gensler2 },
