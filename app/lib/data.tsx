@@ -211,6 +211,13 @@ import travelLuberty from '@/public/about/travel/Luberty.jpeg'
 import travelVancouver from '@/public/about/travel/Vancouvaahh.jpg'
 import travel13 from '@/public/about/travel/13_GenslerHouston.jpg'
 
+import crossroadsHonors1 from '@/public/projects/Crossroads/HonorAwards/1_Honors.jpg'
+import crossroadsHonors2 from '@/public/projects/Crossroads/HonorAwards/2_Honors.jpg'
+import crossroadsHonors3 from '@/public/projects/Crossroads/HonorAwards/3_Honors.jpg'
+import crossroadsHonors4 from '@/public/projects/Crossroads/HonorAwards/4_Honors.jpg'
+import crossroadsHonors5 from '@/public/projects/Crossroads/HonorAwards/5_Honors.jpg'
+import crossroadsHonors6 from '@/public/projects/Crossroads/HonorAwards/6_Honors.jpg'
+
 import { ExperiencesData, ProjectData } from './types'
 import Link from 'next/link'
 
@@ -351,7 +358,24 @@ export const projectsData = [
         title: 'iida norcal honor awards 2026',
         brief:
           'On March 12, 2025, I had the honor of accepting Second Place in the Student Category at the 2026 IIDA Honor Awards.\n\nBeing able to share my project on stage and speak to an audience of people I deeply respect one last time as a student meant more to me than any monetary reward. Being embraced by the industry and supported by my classmates was incredibly rewarding and fulfilling. It is an experience I will carry with me forever. No matter where my career takes me, I will always remember that moment—standing there, feeling as though my entire future was just beginning to unfold before me.',
-        slideshow: [{ youtubeUrl: 'https://youtu.be/7oN6XY03NHc' }],
+        slideshow: [{ youtubeUrl: 'https://youtu.be/7oN6XY03NHc' }, {
+          image: crossroadsHonors1
+        },
+      {
+          image: crossroadsHonors2
+        },
+      {
+          image: crossroadsHonors3
+        },
+      {
+          image: crossroadsHonors4
+        },
+      {
+          image: crossroadsHonors5
+        },
+      {
+          image: crossroadsHonors6
+        }],
       },
     ],
   },
