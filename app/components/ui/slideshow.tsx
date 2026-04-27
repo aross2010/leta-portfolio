@@ -65,7 +65,9 @@ export default function Slideshow({
               <>
                 <Image
                   priority={index === 0}
-                  // placeholder="blur"
+                  loading="eager"
+                  unoptimized
+                  placeholder={showFullscreen ? 'blur' : undefined}
                   src={data.image!}
                   alt="Project Image"
                   fill
