@@ -83,11 +83,12 @@ import workDev7 from '@/public/projects/WorkshopResidence/Development/ortho-05.p
 import notion1 from '@/public/projects/Notion/1_Notion_Lounge.jpg'
 import notion2 from '@/public/projects/Notion/2_Notion_Concept.jpg'
 import notion3 from '@/public/projects/Notion/3_Notion_Look&Feel.jpg'
-import notion4 from '@/public/projects/Notion/4_Notion_Floorplan.jpg'
-import notion5 from '@/public/projects/Notion/5_Notion_UserJourney.jpg'
-import notion6 from '@/public/projects/Notion/6_Notion_Reception.jpg'
-import notion7 from '@/public/projects/Notion/7_Notion_SupportingSpaces.jpg'
-import notion8 from '@/public/projects/Notion/8_Notion_Axon.jpg'
+import notion4 from '@/public/projects/Notion/4_Notion_BubbleDiagram.jpg'
+import notion5 from '@/public/projects/Notion/5_Notion_Floorplan.jpg'
+import notion6 from '@/public/projects/Notion/6_Notion_UserJourney.jpg'
+import notion7 from '@/public/projects/Notion/7_Notion_Reception.jpg'
+import notion8 from '@/public/projects/Notion/8_Notion_SupportingSpaces.jpg'
+import notion9 from '@/public/projects/Notion/9_Notion_Axon.jpg'
 
 import honorAwards1 from '@/public/projects/Notion/HonorAwards/HonorAwards.jpg'
 import honorAwards2 from '@/public/projects/Notion/HonorAwards/HonorAwards2.jpg'
@@ -269,6 +270,7 @@ export const projectsData = [
       { image: notion6 },
       { image: notion7 },
       { image: notion8 },
+      { image: notion9}
     ],
     additionalSections: [
       {
