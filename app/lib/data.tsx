@@ -996,6 +996,17 @@ export const aboutData = {
       title: 'second place student winner',
       competition: 'iida norcal honor awards',
     },
+    {
+      date: 'may 2026',
+      title: '2026 iida student of the year',
+      competition: 'iida of the year awards',
+    },
+    {
+      date: 'may 2026',
+      title: 'honoree recipient',
+      competition:
+        "2026 ia x iida foundation's diversity in design scholarship",
+    },
   ],
 }
 
