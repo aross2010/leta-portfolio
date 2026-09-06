@@ -101,7 +101,7 @@ export default function Intro() {
             type: 'spring',
             stiffness: 75,
           }}
-          className="md:hidden tracking-wider font-medium text-gray-700 mt-2"
+          className="md:hidden tracking-wider text-center font-medium text-gray-700 mt-2"
         >
           {titleLong}
         </motion.h2>

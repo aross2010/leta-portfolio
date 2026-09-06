@@ -910,7 +910,7 @@ export const projectsData = [
 export const aboutData = {
   name: 'leta pham',
   titleShort: 'interior design',
-  titleLong: 'bfa interior design, sjsu',
+  titleLong: 'well accredited professional interior designer',
   links: [
     {
       icon: FaInstagram,
